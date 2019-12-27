@@ -1,20 +1,25 @@
 ---
 
 layout: col-sidebar
-title: OWASP benchmark
-tags: example-tag
-level: 4
+title: OWASP Benchmark
+site_side: true
+tags: benchmark
+project: true
+level: 3
 type: tool
+pitch: The OWASP Benchmark Project is a Java test suite designed to evaluate the accuracy, coverage, and speed of automated software vulnerability detection tools.
 
 ---
+<!-- rebuild 40 -->
 
-This is an example of a Project or Chapter Page.  Please change these items to indicate the actual information you wish to present.  In addition to this information, the 'front-matter' above this text should be modified to reflect your actual information.  An explanation of each of the front-matter items is below:
+[![OWASP Lab](https://img.shields.io/badge/owasp-lab%20project-yellow)](https://www2.owasp.org/projects#div-lab)
 
-layout: This is the layout used by project and chapter pages.  You should leave this value as col-sidebar
+## OWASP Benchmark Project
 
-title: This is the title of your project or chapter page, usually the name.  For example, OWASP Zed Attack Proxy or OWASP Baltimore
+The OWASP Benchmark Project is a Java test suite designed to evaluate the accuracy, coverage, and speed of automated software vulnerability detection tools. Without the ability to measure these tools, it is difficult to understand their strengths and weaknesses, and compare them to each other.
 
-tags: This is a space-delimited list of tags you associate with your project or chapter.  If you are using tabs, at least one of these tags should be unique in order to be used in the tabs files (an example tab is included in this repo) 
+OWASP Benchmark is a fully runnable open source web application that contains thousands of exploitable test cases, each mapped to specific CWEs, which can be analyzed by any type of Application Security Testing (AST) tool, including SAST, DAST (like OWASP ZAP), and IAST tools. The intent is that all the vulnerabilities deliberately included in and scored by the Benchmark are actually exploitable so its a fair test for any kind of application vulnerability detection tool. The Benchmark also includes dozens of scorecard generators for numerous open source and commercial AST tools, and the set of supported tools is growing all the time.
 
-level: For projects, this is your project level (2 - Incubator, 3 - Lab, 4 - Flagship)
-
+## Related Projects
+* [NSA's Juliet for Java](http://samate.nist.gov/SARD/testsuite.php)
+* [The Web Application Vulnerability Scanner Evaluation Project (WAVSEP)](http://sectoolmarket.com/)
