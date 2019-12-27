@@ -25,7 +25,7 @@ Trust Boundary Violation | 725 | 126 | 501
 Weak Randomness | 3640 | 493 | 330
 XPATH Injection | 347 | 35 | 643
 XSS (Cross-Site Scripting) | 3449 | 455 | 79
-Total Test Cases | 21,041 | 2,740
+**Total Test Cases** | **21,041** | **2,740**
 
 Each Benchmark version comes with a spreadsheet that lists every test case, the vulnerability category, the CWE number, and the expected result (true finding/false positive). Look for the file: expectedresults-VERSION#.csv in the project root directory.
 

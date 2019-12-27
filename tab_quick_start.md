@@ -62,7 +62,6 @@ We have several preconstructed VMs or instructions on how to build one that you 
 docker images  --> You should see the new benchmark:latest image in the list provided
 # The Benchmark Docker Image only has to be created once. 
 ```
-
 ```Shell
 To run the Benchmark in your Docker VM, just run:
   ./runDockerImage.sh  --> This pulls in any updates to Benchmark since the Image was built, builds everything, and starts a remotely accessible Benchmark web app.
@@ -75,7 +74,6 @@ Or if you want to access from a different machine:
  docker-machine ls (in a different terminal) --> To get IP Docker VM is exporting (e.g., tcp://192.168.99.100:2376)
  Navigate to: https://192.168.99.100:8443/benchmark in your browser (using the above IP as an example)
 ```
-
 * Amazon Web Services (AWS) - Here's how you set up the Benchmark on an AWS VM:
 ```Shell
 sudo yum install git
@@ -95,26 +93,21 @@ chmod 755 *.sh
 There are scripts for running each of the free SAST vulnerability detection tools included with the Benchmark against the Benchmark test cases. On Linux, you might have to make them executable (e.g., chmod 755 *.sh) before you can run them.
 
 Generating Test Results for PMD:
-
 ```Shell
 $ ./scripts/runPMD.sh (Linux) or .\scripts\runPMD.bat (Windows)
 ```
 Generating Test Results for FindBugs:
-
 ```Shell
 $ ./scripts/runFindBugs.sh (Linux) or .\scripts\runFindBugs.bat (Windows)
 ```
 Generating Test Results for FindBugs with the FindSecBugs plugin:
-
 ```Shell
 $ ./scripts/runFindSecBugs.sh (Linux) or .\scripts\runFindSecBugs.bat (Windows)
 ```
 In each case, the script will generate a results file and put it in the /results directory. For example:
-
 ```Shell
 Benchmark_1.2-findbugs-v3.0.1-1026.xml
 ```
-
 This results file name is carefully constructed to mean the following: It's a results file against the OWASP Benchmark version 1.2, FindBugs was the analysis tool, it was version 3.0.1 of FindBugs, and it took 1026 seconds to run the analysis.
 
 NOTE: If you create a results file yourself, by running a commercial tool for example, you can add the version # and the compute time to the filename just like this and the Benchmark Scorecard generator will pick this information up and include it in the generated scorecard. If you don't, depending on what metadata is included in the tool results, the Scorecard generator might do this automatically anyway.
@@ -132,18 +125,16 @@ An example of a real scorecard for some open source tools is provided at the top
 We recommend including the Benchmark version number in any results file name, in order to help prevent mismatches between the expected results and the actual results files. A tool will not score well against the wrong expected results.
 
 **Customizing Your Scorecard Generation**
-The createScorecard scripts are very simple. They only have one line. Here's what the 1.2 version looks like:
 
+The createScorecard scripts are very simple. They only have one line. Here's what the 1.2 version looks like:
 ```Shell
 mvn validate -Pbenchmarkscore -Dexec.args="expectedresults-1.2.csv results"
 ```
 This Maven command simply says to run the BenchmarkScore application, passing in two parameters. The 1st is the Benchmark expected results file to compare the tool results against. And the 2nd is the name of the directory that contains all the results from tools run against that version of the Benchmark. If you have tool results older than the current version of the Benchmark, like 1.1 results for example, then you would do something like this instead:
-
 ```Shell
 mvn validate -Pbenchmarkscore -Dexec.args="expectedresults-1.1.csv 1.1_results"
 ```
 To keep things organized, we actually put the expected results file inside the same results folder for that version of the Benchmark, so our command looks like this:
-
 ```Shell
 mvn validate -Pbenchmarkscore -Dexec.args="1.1_results/expectedresults-1.1.csv 1.1_results"
 ```

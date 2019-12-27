@@ -10,16 +10,15 @@ People frequently have difficulty scanning the Benchmark with various tools due 
 
 ## Generic Tips ##
 Because of the size of the Benchmark, you may need to give your tool more memory before it starts the scan. If its a Java based tool, you may want to pass more memory to it like this:
-
 ```Shell
 -Xmx4G (This gives the Java application 4 Gig of memory)
 ```
 
 ## SAST Tools ##
 **Checkmarx**
-The Checkmarx SAST Tool (CxSAST) is ready to scan the OWASP Benchmark out-of-the-box. Please notice that the OWASP Benchmark “hides” some vulnerabilities in dead code areas, for example:
 
-```Shell
+The Checkmarx SAST Tool (CxSAST) is ready to scan the OWASP Benchmark out-of-the-box. Please notice that the OWASP Benchmark “hides” some vulnerabilities in dead code areas, for example:
+```code()
 if (0>1)
 {
   //vulnerable code
@@ -37,18 +36,18 @@ Therefore, in order to receive an OWASP score untainted by dead code, re-configu
 4. Save the queries.
 
 **Kiuwan Code Security**
+
 Kiuwan Code Security wrote their own instructions for scanning the OWASP Benchmark. Refer to their [step-by-step guide](https://www.kiuwan.com/blog/owasp-benchmark-diy/) on the Kiuwan website.
 
 **Micro Focus (Formally HP) Fortify**
-If you are using the Audit Workbench, you can give it more memory and make sure you invoke it in 64-bit mode by doing this:
 
+If you are using the Audit Workbench, you can give it more memory and make sure you invoke it in 64-bit mode by doing this:
 ```Shell
  set AWB_VM_OPTS="-Xmx2G -XX:MaxPermSize=256m"
  export AWB_VM_OPTS="-Xmx2G -XX:MaxPermSize=256m"
  auditworkbench -64
 ```
 We found it was easier to use the Maven support in Fortify to scan the Benchmark and to do it in 2 phases, translate, and then scan. We did something like this:
-
 ```Shell
  Translate Phase:
  export JAVA_HOME=$(/usr/libexec/java_home)
@@ -67,24 +66,30 @@ We found it was easier to use the Maven support in Fortify to scan the Benchmark
 ```
 
 **PMD**
+
 We include this free tool in the Benchmark and its all dialed in. Simply run the script: ./script/runPMD.(sh or bat). If you want to run a different version of PMD, just change its version number in the Benchmark pom.xml file. (NOTE: PMD doesn't find any security issues. We include it because its interesting to know that it doesn't.)
 
 **SpotBugs**
+
 We include this free tool in the Benchmark and its all dialed in. Simply run the script: ./script/runSpotBugs.(sh or bat). If you want to run a different version of SpotBugs, just change its version number in the Benchmark pom.xml file.
 
 **SpotBugs with FindSecBugs**
+
 [FindSecurityBugs](http://h3xstream.github.io/find-sec-bugs/) is a great plugin for SpotBugs that significantly increases the ability for SpotBugs to find security issues. We include this free tool in the Benchmark and its all dialed in. Simply run the script: ./script/runFindSecBugs.(sh or bat). If you want to run a different version of FindSecBugs, just change the version number of the findsecbugs-plugin artifact in the Benchmark pom.xml file.
 
 **Xanitizer**
+
 The vendor has written their own guide to [How to Set Up Xanitizer for OWASP Benchmark](http://www.rigs-it.net/opendownloads/whitepapers/HowToSetUpXanitizerForOWASPBenchmarkProject.pdf).
 
 ## DAST Tools ##
 **Burp Pro**
+
 To scan, first spider the entire Benchmark, and then select the /Benchmark URL and actively scan that branch. You can skip all the .html pages and any other pages that Burp says have no parameters.
 
 NOTE: We have been unable to simply run Burp Pro against the entire Benchmark in one shot. In our experience, it eventually freezes/stops scanning. We've had to run it against each vulnerability area one at a time. If you figure out how to get Burp Pro to scan all of Benchmark in one shot, let us know how you did it!
 
 **OWASP ZAP**
+
 ZAP may require additional memory to be able to scan the Benchmark. To configure the amount of memory:
 * Tools --> Options --> JVM: Recommend setting to: -Xmx2048m (or larger). (Then restart ZAP).
 
@@ -120,6 +125,7 @@ Things we tried that didn't improve the score:
 Interactive Application Security Testing (IAST) tools work differently than scanners. IAST tools monitor an application as it runs to identify application vulnerabilities using context from inside the running application. Typically these tools run continuously, immediately notifying users of vulnerabilities, but you can also get a full report of an entire application. To do this, we simply run the Benchmark application with an IAST agent and use a crawler to hit all the pages.
 
 **Contrast Assess**
+
 To use Contrast Assess, we simply add the Java agent to the Benchmark environment and run the BenchmarkCrawler. The entire process should only take a few minutes. We provided a few scripts, which simply add the -javaagent:contrast.jar flag to the Benchmark launch configuration. We have tested on MacOS, Ubuntu, and Windows. Be sure your VM has at least 4M of memory.
 
 * Ensure your environment has Java, Maven, and git installed, then build the Benchmark project
@@ -179,4 +185,5 @@ To use Contrast Assess, we simply add the Java agent to the Benchmark environmen
   ```
 
 **Hdiv Detection**
+
 Hdiv has written their own instructions on how to run the detection component of their product on the Benchmark here: https://hdivsecurity.com/docs/features/benchmark/#how-to-run-hdiv-in-owasp-benchmark-project. You'll see that these instructions involve using the same crawler used to exercise all the test cases in the Benchmark, just like Contrast above.
