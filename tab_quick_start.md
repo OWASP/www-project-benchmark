@@ -66,7 +66,7 @@ docker images  --> You should see the new benchmark:latest image in the list pro
 To run the Benchmark in your Docker VM, just run:
   ./runDockerImage.sh  --> This pulls in any updates to Benchmark since the Image was built, builds everything, and starts a remotely accessible Benchmark web app.
 If successful, you should see this at the end:
-  [INFO] [talledLocalContainer] Tomcat 8.x started on port [8443]
+  [INFO]_[talledLocalContainer] Tomcat 8.x started on port [8443]
   [INFO] Press Ctrl-C to stop the container...
 Then simply navigate to: https://localhost:8443/benchmark from the machine you are running Docker
 

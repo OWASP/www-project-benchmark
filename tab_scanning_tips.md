@@ -149,7 +149,7 @@ To use Contrast Assess, we simply add the Java agent to the Benchmark environmen
   [INFO] ------------------------------------------------------------------------
   [INFO] 
   ...
-  [INFO] [talledLocalContainer] Tomcat 8.x started on port [8443]
+  [INFO]_[talledLocalContainer] Tomcat 8.x started on port [8443]
   [INFO] Press Ctrl-C to stop the container...
 ```
 * In Terminal 2, launch the crawler and wait a minute or two for the crawl to complete.
@@ -169,7 +169,7 @@ To use Contrast Assess, we simply add the Java agent to the Benchmark environmen
 ```
 * Press Ctrl-C to stop the Benchmark in Terminal 1. Note: on Windows, select "N" when asked Terminate batch job (Y/N))
 ```Shell
-  [INFO] [talledLocalContainer] Tomcat 8.x is stopped
+  [INFO]_[talledLocalContainer] Tomcat 8.x is stopped
   Copying Contrast report to results directory
 ```
 * In Terminal 2, generate scorecards in /Benchmark/scorecard
