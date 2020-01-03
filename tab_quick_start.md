@@ -1,5 +1,6 @@
 ---
-title: Quick Start
+title: Quick_Start
+displaytext: Quick Start
 layout:  null
 tab: true
 order: 3
@@ -9,7 +10,7 @@ tags: benchmark
 ## What is in the Benchmark? ##
 The Benchmark is a Java Maven project. Its primary component is thousands of test cases (e.g., BenchmarkTest00001.java), each of which is a single Java servlet that contains a single vulnerability (either a true positive or false positive). The vulnerabilities span about a dozen different CWEs currently.
 
-An expectedresults.csv is published with each version of the Benchmark (e.g., expectedresults-1.2.csv) and it specifically lists the expected results for each test case. Here’s what the first two rows in this file looks like for version 1.1 of the Benchmark:
+An expectedresults.csv is published with each version of the Benchmark (e.g., expectedresults-1.2.csv) and it specifically lists the expected results for each test case. Hereï¿½s what the first two rows in this file looks like for version 1.1 of the Benchmark:
 
 ```code()
  # test name		category	real vulnerability	CWE	Benchmark version: 1.1	2015-05-22
@@ -93,21 +94,21 @@ chmod 755 *.sh
 There are scripts for running each of the free SAST vulnerability detection tools included with the Benchmark against the Benchmark test cases. On Linux, you might have to make them executable (e.g., chmod 755 *.sh) before you can run them.
 
 Generating Test Results for PMD:
-```Shell
-$ ./scripts/runPMD.sh (Linux) or .\scripts\runPMD.bat (Windows)
-```
+    Shell
+    $ ./scripts/runPMD.sh (Linux) or .\scripts\runPMD.bat (Windows)
+
 Generating Test Results for FindBugs:
-```Shell
-$ ./scripts/runFindBugs.sh (Linux) or .\scripts\runFindBugs.bat (Windows)
-```
+    Shell
+    $ ./scripts/runFindBugs.sh (Linux) or .\scripts\runFindBugs.bat (Windows)
+
 Generating Test Results for FindBugs with the FindSecBugs plugin:
-```Shell
-$ ./scripts/runFindSecBugs.sh (Linux) or .\scripts\runFindSecBugs.bat (Windows)
-```
+    Shell
+    $ ./scripts/runFindSecBugs.sh (Linux) or .\scripts\runFindSecBugs.bat (Windows)
+
 In each case, the script will generate a results file and put it in the /results directory. For example:
-```Shell
-Benchmark_1.2-findbugs-v3.0.1-1026.xml
-```
+    Shell
+    Benchmark_1.2-findbugs-v3.0.1-1026.xml
+
 This results file name is carefully constructed to mean the following: It's a results file against the OWASP Benchmark version 1.2, FindBugs was the analysis tool, it was version 3.0.1 of FindBugs, and it took 1026 seconds to run the analysis.
 
 NOTE: If you create a results file yourself, by running a commercial tool for example, you can add the version # and the compute time to the filename just like this and the Benchmark Scorecard generator will pick this information up and include it in the generated scorecard. If you don't, depending on what metadata is included in the tool results, the Scorecard generator might do this automatically anyway.

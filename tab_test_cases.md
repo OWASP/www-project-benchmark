@@ -1,5 +1,6 @@
 ---
-title: Test Cases
+title: Test_Cases
+displaytext: Test Cases
 layout:  null
 tab: true
 order: 1
@@ -44,7 +45,7 @@ Every test case is:
 * All vulnerability types in the OWASP Top 10
 * Does the tool find flaws in libraries?
 * Does the tool find flaws spanning custom code and libraries?
-* Does tool handle web services? REST, XML, GWT, etc…
+* Does tool handle web services? REST, XML, GWT, etcï¿½
 * Does tool work with different app servers? Java platforms?
 * JSPs
 * More popular frameworks
@@ -59,70 +60,70 @@ Every test case is:
 
 Each test case is a simple Java EE servlet. BenchmarkTest00001 in version 1.0 of the Benchmark was an LDAP Injection test with the following metadata in the accompanying BenchmarkTest00001.xml file:
 
-```xml
- <test-metadata>
-   <category>ldapi</category>
-   <test-number>00001</test-number>
-   <vulnerability>true</vulnerability>
-   <cwe>90</cwe>
- </test-metadata>
-```
+		xml
+		<test-metadata>
+		<category>ldapi</category>
+		<test-number>00001</test-number>
+		<vulnerability>true</vulnerability>
+		<cwe>90</cwe>
+		</test-metadata>
+
 
 BenchmarkTest00001.java in the OWASP Benchmark 1.0 simply reads in all the cookie values, looks for a cookie named "foo", and uses the value of this cookie when performing an LDAP query. Here's the code for BenchmarkTest00001.java:
 
-```java
- package org.owasp.benchmark.testcode;
- 
- import java.io.IOException;
- 
- import javax.servlet.ServletException;
- import javax.servlet.annotation.WebServlet;
- import javax.servlet.http.HttpServlet;
- import javax.servlet.http.HttpServletRequest;
- import javax.servlet.http.HttpServletResponse;
- 
- @WebServlet("/BenchmarkTest00001")
- public class BenchmarkTest00001 extends HttpServlet {
- 	
- 	private static final long serialVersionUID = 1L;
- 	
- 	@Override
- 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
- 		doPost(request, response);
- 	}
- 
- 	@Override
- 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
- 		// some code
- 
- 		javax.servlet.http.Cookie[] cookies = request.getCookies();
- 		
- 		String param = null;
- 		boolean foundit = false;
- 		if (cookies != null) {
- 			for (javax.servlet.http.Cookie cookie : cookies) {
- 				if (cookie.getName().equals("foo")) {
- 					param = cookie.getValue();
- 					foundit = true;
- 				}
- 			}
- 			if (!foundit) {
- 				// no cookie found in collection
- 				param = "";
- 			}
- 		} else {
- 			// no cookies
- 			param = "";
- 		}
- 		
- 		try {
- 			javax.naming.directory.DirContext dc = org.owasp.benchmark.helpers.Utils.getDirContext();
- 			Object[] filterArgs = {"a","b"};
- 			dc.search("name", param, filterArgs, new javax.naming.directory.SearchControls());
- 		} catch (javax.naming.NamingException e) {
- 			throw new ServletException(e);
- 		}
- 	}
- }
- ```
+		java
+		package org.owasp.benchmark.testcode;
+		
+		import java.io.IOException;
+		
+		import javax.servlet.ServletException;
+		import javax.servlet.annotation.WebServlet;
+		import javax.servlet.http.HttpServlet;
+		import javax.servlet.http.HttpServletRequest;
+		import javax.servlet.http.HttpServletResponse;
+		
+		@WebServlet("/BenchmarkTest00001")
+		public class BenchmarkTest00001 extends HttpServlet {
+			
+			private static final long serialVersionUID = 1L;
+			
+			@Override
+			public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+				doPost(request, response);
+			}
+		
+			@Override
+			public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+				// some code
+		
+				javax.servlet.http.Cookie[] cookies = request.getCookies();
+				
+				String param = null;
+				boolean foundit = false;
+				if (cookies != null) {
+					for (javax.servlet.http.Cookie cookie : cookies) {
+						if (cookie.getName().equals("foo")) {
+							param = cookie.getValue();
+							foundit = true;
+						}
+					}
+					if (!foundit) {
+						// no cookie found in collection
+						param = "";
+					}
+				} else {
+					// no cookies
+					param = "";
+				}
+				
+				try {
+					javax.naming.directory.DirContext dc = org.owasp.benchmark.helpers.Utils.getDirContext();
+					Object[] filterArgs = {"a","b"};
+					dc.search("name", param, filterArgs, new javax.naming.directory.SearchControls());
+				} catch (javax.naming.NamingException e) {
+					throw new ServletException(e);
+				}
+			}
+		}
+		
  
