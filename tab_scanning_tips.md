@@ -38,7 +38,7 @@ Therefore, in order to receive an OWASP score untainted by dead code, re-configu
 
 **Kiuwan Code Security**
 
-Kiuwan Code Security wrote their own instructions for scanning the OWASP Benchmark. Refer to their [step-by-step guide](https://www.kiuwan.com/blog/owasp-benchmark-diy/) on the Kiuwan website.
+Kiuwan Code Security includes a predefined model for executing the OWASP benchmark. Refer to the [step-by-step instructions](https://www.kiuwan.com/blog/owasp-benchmark-diy/) on the Kiuwan website.
 
 **Micro Focus (Formally HP) Fortify**
 
