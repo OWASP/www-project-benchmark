@@ -26,7 +26,7 @@ Note: We looked into supporting [Checkstyle](http://checkstyle.sourceforge.net/)
 **Commercial SAST Tools:**
 
 * [CAST Application Intelligence Platform (AIP)](https://www.castsoftware.com/products/application-intelligence-platform) - .xml results file
-* [Checkmarx CxSAST](https://www.checkmarx.com/products/static-application-security-testing/) - .xml results file
+* [Checkmarx CxSAST](https://www.checkmarx.com/products/static-application-security-testing) - .xml results file
 * [HCL (Formally IBM) AppScan SAST (Standalone and Cloud)](https://www.hcltechsw.com/wps/portal/products/appscan/home) - .ozasmt or .xml results file
 * [Julia Analyzer](https://juliasoft.com/solutions/julia-for-security/) - .xml results file
 * [Kiuwan Code Security](https://www.kiuwan.com/code-security-sast/) - .threadfix results file
@@ -57,7 +57,7 @@ Note: While we support scorecard generators for these Free and Commercial DAST t
 
 **Commercial DAST Tools:**
 
-* [Acunetix Web Vulnerability Scanner (WVS)](https://www.acunetix.com/vulnerability-scanner/) - .xml results file ([Generated using command line interface (see Chapter 10.)](https://www.acunetix.com/resources/wvs11manual.pdf) /ExportXML switch)
+* [Acunetix Web Vulnerability Scanner (WVS)](https://www.acunetix.com/vulnerability-scanner/) - .xml results file ([see Exporting Scan Results (Generic XML export))](https://www.acunetix.com/resources/wvs11manual.pdf) was the command line /ExportXML switch) or .xml results file from Acunetix 360
 * [Burp Pro](https://portswigger.net/burp) - .xml results file
 * [HCL (Formally IBM) AppScan DAST](https://www.hcltechsw.com/wps/portal/products/appscan/home) - .xml results file
 * [Micro Focus (Formally HPE) Fortify WebInspect](https://www.microfocus.com/en-us/products/webinspect-dynamic-analysis-dast/overview) - .xml results file
@@ -69,6 +69,7 @@ If you have access to other DAST Tools, PLEASE RUN THEM FOR US against the Bench
 
 **Commercial Interactive Application Security Testing (IAST) Tools:**
 
+* [Checkmarx CxIAST](https://www.checkmarx.com/products/interactive-application-security-testing) - .csv results file
 * [Contrast Assess](https://www.contrastsecurity.com/interactive-application-security-testing-iast) - .zip results file (You can scan Benchmark w/Contrast for free. See: https://www.contrastsecurity.com/contrast-community-edition)
 * [Hdiv Detection (IAST)](https://hdivsecurity.com/interactive-application-security-testing-iast) - .hlg results file
 * [Synopsys Seeker IAST](https://www.synopsys.com/software-integrity/security-testing/interactive-application-security-testing.html) - .csv results file
