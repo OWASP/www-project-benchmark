@@ -11,20 +11,20 @@ People frequently have difficulty scanning the Benchmark with various tools due 
 
 ## Generic Tips ##
 Because of the size of the Benchmark, you may need to give your tool more memory before it starts the scan. If its a Java based tool, you may want to pass more memory to it like this:
-    Shell
+```Shell
     -Xmx4G (This gives the Java application 4 Gig of memory)
-
+```
 
 ## SAST Tools ##
 **Checkmarx**
 
-The Checkmarx SAST Tool (CxSAST) is ready to scan the OWASP Benchmark out-of-the-box. Please notice that the OWASP Benchmark �hides� some vulnerabilities in dead code areas, for example:
-    code()
+The Checkmarx SAST Tool (CxSAST) is ready to scan the OWASP Benchmark out-of-the-box. Please notice that the OWASP Benchmark "hides" some vulnerabilities in dead code areas, for example:
+```Java
     if (0>1)
     {
       //vulnerable code
     }
-
+```
 By default, CxSAST will find these vulnerabilities since Checkmarx believes that including dead code in the scan results is a SAST best practice.
 
 Checkmarx's experience shows that security experts expect to find these types of code vulnerabilities, and demand that their developers fix them. However, OWASP Benchmark considers the flagging of these vulnerabilities as False Positives, as a result lowering Checkmarx's overall score.
@@ -43,13 +43,13 @@ Kiuwan Code Security wrote their own instructions for scanning the OWASP Benchma
 **Micro Focus (Formally HP) Fortify**
 
 If you are using the Audit Workbench, you can give it more memory and make sure you invoke it in 64-bit mode by doing this:
-    Shell
+```Shell
     set AWB_VM_OPTS="-Xmx2G -XX:MaxPermSize=256m"
     export AWB_VM_OPTS="-Xmx2G -XX:MaxPermSize=256m"
     auditworkbench -64
-
+```
 We found it was easier to use the Maven support in Fortify to scan the Benchmark and to do it in 2 phases, translate, and then scan. We did something like this:
-    Shell
+```Shell
     Translate Phase:
     export JAVA_HOME=$(/usr/libexec/java_home)
     export PATH=$PATH:/Applications/HP_Fortify/HP_Fortify_SCA_and_Apps_17.10/bin
@@ -57,14 +57,12 @@ We found it was easier to use the Maven support in Fortify to scan the Benchmark
     mvn sca:clean
     mvn sca:translate
 
-
-    Shell
     Scan Phase:
     export JAVA_HOME=$(/usr/libexec/java_home)
     export PATH=$PATH:/Applications/HP_Fortify/HP_Fortify_SCA_and_Apps_4.10/bin
     export SCA_VM_OPTS="-Xmx10G -version 1.7"
     mvn sca:scan
-
+```
 
 **PMD**
 
@@ -130,17 +128,18 @@ Interactive Application Security Testing (IAST) tools work differently than scan
 To use Contrast Assess, we simply add the Java agent to the Benchmark environment and run the BenchmarkCrawler. The entire process should only take a few minutes. We provided a few scripts, which simply add the -javaagent:contrast.jar flag to the Benchmark launch configuration. We have tested on MacOS, Ubuntu, and Windows. Be sure your VM has at least 4M of memory.
 
 * Ensure your environment has Java, Maven, and git installed, then build the Benchmark project
-    Shell
+```Shell
       $ git clone https://github.com/OWASP/Benchmark.git
       $ cd Benchmark
       $ mvn compile
-
+```
 * Download a licensed copy of the Contrast Assess Java Agent (contrast.jar) from your Contrast TeamServer account and put it in the /Benchmark/tools/Contrast directory.
-    Shell
+```Shell
       $ cp ~/Downloads/contrast.jar tools/Contrast
+```
 
 * In Terminal 1, launch the Benchmark application and wait until it starts
-    Shell
+```Shell
       $ cd tools/Contrast  
       $ ./runBenchmark_wContrast.sh (.bat on Windows)
       [INFO] Scanning for projects...
@@ -152,13 +151,13 @@ To use Contrast Assess, we simply add the Java agent to the Benchmark environmen
       ...
       [INFO]_[talledLocalContainer] Tomcat 8.x started on port [8443]
       [INFO] Press Ctrl-C to stop the container...
-
+```
 * In Terminal 2, launch the crawler and wait a minute or two for the crawl to complete.
-    Shell
+```Shell
       $ ./runCrawler.sh (.bat on Windows)
-
+```
 * A Contrast report has been generated in /Benchmark/tools/Contrast/working/contrast.log. This report will be automatically copied (and renamed with version number) to /Benchmark/results directory.
-    Shell
+```Shell
       $ more tools/Contrast/working/contrast.log
       2016-04-22 12:29:29,716 [main b] INFO - Contrast Runtime Engine
       2016-04-22 12:29:29,717 [main b] INFO - Copyright (C) 2019
@@ -167,24 +166,28 @@ To use Contrast Assess, we simply add the Java agent to the Benchmark environmen
       2016-04-22 12:29:29,717 [main b] INFO - All Rights Reserved
       2016-04-22 12:29:29,717 [main b] INFO - https://www.contrastsecurity.com/
       ...
+```
 
 * Press Ctrl-C to stop the Benchmark in Terminal 1. Note: on Windows, select "N" when asked Terminate batch job (Y/N))
-    Shell
+```Shell
       [INFO]_[talledLocalContainer] Tomcat 8.x is stopped
       Copying Contrast report to results directory
+```
 
 * In Terminal 2, generate scorecards in /Benchmark/scorecard
-    Shell
+```Shell
       $ ./createScorecards.sh (.bat on Windows)
       Analyzing results from Benchmark_1.2-Contrast.log
       Actual results file generated: /Users/owasp/Projects/Benchmark/scorecard/Benchmark_v1.2_Scorecard_for_Contrast.csv
       Report written to: /Users/owasp/Projects/Benchmark/scorecard/Benchmark_v1.2_Scorecard_for_Contrast.html
+```
 
 * Open the Benchmark Scorecard in your browser
-    Shell
+```Shell
       /Users/owasp/Projects/Benchmark/scorecard/Benchmark_v1.2_Scorecard_for_Contrast.html
-      
+```
 
 **Hdiv Detection**
 
 Hdiv has written their own instructions on how to run the detection component of their product on the Benchmark here: https://hdivsecurity.com/docs/features/benchmark/#how-to-run-hdiv-in-owasp-benchmark-project. You'll see that these instructions involve using the same crawler used to exercise all the test cases in the Benchmark, just like Contrast above.
+

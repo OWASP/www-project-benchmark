@@ -45,7 +45,7 @@ Every test case is:
 * All vulnerability types in the OWASP Top 10
 * Does the tool find flaws in libraries?
 * Does the tool find flaws spanning custom code and libraries?
-* Does tool handle web services? REST, XML, GWT, etc�
+* Does tool handle web services? REST, XML, GWT, etc?
 * Does tool work with different app servers? Java platforms?
 * JSPs
 * More popular frameworks

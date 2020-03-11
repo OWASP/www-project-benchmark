@@ -27,7 +27,7 @@ If you imagine the line that connects all these points, from 0,0 to 100,100 esta
 ![](https://raw.githubusercontent.com/OWASP/Benchmark/master/src/main/resources/scorecard/content/benchmark_guide.png)
 A point plotted on this chart provides a visual indication of how well a tool did considering both the True Positives the tool reported, as well as the False Positives it reported. We also want to compute an individual score for that point in the range 0 - 100, which we call the Benchmark Accuracy Score.
 
-The Benchmark Accuracy Score is essentially a [Youden Index](https://en.wikipedia.org/wiki/Youden%27s_J_statistic), which is a standard way of summarizing the accuracy of a set of tests. Youden's index is one of the oldest measures for diagnostic accuracy. It is also a global measure of a test performance, used for the evaluation of overall discriminative power of a diagnostic procedure and for comparison of this test with other tests. Youden's index is calculated by deducting 1 from the sum of a test�s sensitivity and specificity expressed not as percentage but as a part of a whole number: (sensitivity + specificity) � 1. For a test with poor diagnostic accuracy, Youden's index equals 0, and in a perfect test Youden's index equals 1.
+The Benchmark Accuracy Score is essentially a [Youden Index](https://en.wikipedia.org/wiki/Youden%27s_J_statistic), which is a standard way of summarizing the accuracy of a set of tests. Youden's index is one of the oldest measures for diagnostic accuracy. It is also a global measure of a test performance, used for the evaluation of overall discriminative power of a diagnostic procedure and for comparison of this test with other tests. Youden's index is calculated by deducting 1 from the sum of a test's sensitivity and specificity expressed not as percentage but as a part of a whole number: (sensitivity + specificity) - 1. For a test with poor diagnostic accuracy, Youden's index equals 0, and in a perfect test Youden's index equals 1.
 
     code()
     So for example, if a tool has a True Positive Rate (TPR) of .98 (i.e., 98%) 
@@ -39,7 +39,7 @@ The Benchmark Accuracy Score is essentially a [Youden Index](https://en.wikipedi
     And this would equate to a Benchmark score of 93 (since we normalize this to the range 0 - 100)
 
 
-On the graph, the Benchmark Score is the length of the line from the point down to the diagonal �guessing� line. Note that a Benchmark score can actually be negative if the point is below the line. This is caused when the False Positive Rate is actually higher than the True Positive Rate.
+On the graph, the Benchmark Score is the length of the line from the point down to the diagonal "guessing" line. Note that a Benchmark score can actually be negative if the point is below the line. This is caused when the False Positive Rate is actually higher than the True Positive Rate.
 
 ## Generating Benchmark Scores ##
 Anyone can use this Benchmark to evaluate vulnerability detection tools. The basic steps are:
@@ -53,8 +53,8 @@ Full details on how to do this are at the bottom of the page on the Quick Start 
 
 We encourage both vendors, open source tools, and end users to verify their application security tools against the Benchmark. In order to ensure that the results are fair and useful, we ask that you follow a few simple rules when publishing results. We won't recognize any results that aren't easily reproducible:
 
-1. A description of the default �out-of-the-box� installation, version numbers, etc�
-2. Any and all configuration, tailoring, onboarding, etc� performed to make the tool run
+1. A description of the default "out-of-the-box" installation, version numbers, etc.
+2. Any and all configuration, tailoring, onboarding, etc. performed to make the tool run
 3. Any and all changes to default security rules, tests, or checks used to achieve the results
 4. Easily reproducible steps to run the tool
 
@@ -63,7 +63,7 @@ The Benchmark includes tools to interpret raw tool output, compare it to the exp
 
 Security Category | TP | FN | TN | FP | Total | TPR | FPR | Score
 ----------------- | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ | ------------------
-**General security category for test cases.** | **True Positives**: Tests with real vulnerabilities that were correctly reported as vulnerable by the tool. | **False Negative**: Tests with real vulnerabilities that were not correctly reported as vulnerable by the tool. | **True Negative**: Tests with fake vulnerabilities that were correctly not reported as vulnerable by the tool. | **False Positive**: Tests with fake vulnerabilities that were incorrectly reported as vulnerable by the tool. | Total test cases for this category. | **True Positive Rate**: TP / ( TP + FN ) - Also referred to as Precision, as defined at [Wikipedia](https://en.wikipedia.org/wiki/Precision_and_recall). | **False Positive Rate**: FP / ( FP + TN ). | Normalized distance from the �guess line� TPR - FPR.
+**General security category for test cases.** | **True Positives**: Tests with real vulnerabilities that were correctly reported as vulnerable by the tool. | **False Negative**: Tests with real vulnerabilities that were not correctly reported as vulnerable by the tool. | **True Negative**: Tests with fake vulnerabilities that were correctly not reported as vulnerable by the tool. | **False Positive**: Tests with fake vulnerabilities that were incorrectly reported as vulnerable by the tool. | Total test cases for this category. | **True Positive Rate**: TP / ( TP + FN ) - Also referred to as Precision, as defined at [Wikipedia](https://en.wikipedia.org/wiki/Precision_and_recall). | **False Positive Rate**: FP / ( FP + TN ). | Normalized distance from the "guess line" TPR - FPR.
 Command Injection | ... | ... | ... | ... | ... | ... | ... | ...
 Etc. | ... | ... | ... | ... | ... | ... | ... | ...
    | **Total TP** | **Total FN** | **Total TN** | **Total FP** | **Total TC** | **Average TPR** | **Average FPR** | **Average Score**

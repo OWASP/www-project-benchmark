@@ -10,11 +10,11 @@ tags: benchmark
 ## What is in the Benchmark? ##
 The Benchmark is a Java Maven project. Its primary component is thousands of test cases (e.g., BenchmarkTest00001.java), each of which is a single Java servlet that contains a single vulnerability (either a true positive or false positive). The vulnerabilities span about a dozen different CWEs currently.
 
-An expectedresults.csv is published with each version of the Benchmark (e.g., expectedresults-1.2.csv) and it specifically lists the expected results for each test case. Here�s what the first two rows in this file looks like for version 1.1 of the Benchmark:
+An expectedresults.csv is published with each version of the Benchmark (e.g., expectedresults-1.2.csv) and it specifically lists the expected results for each test case. Here's what the first two rows in this file looks like for version 1.1 of the Benchmark:
 
 ```code()
  # test name		category	real vulnerability	CWE	Benchmark version: 1.1	2015-05-22
- BenchmarkTest00001	crypto		TRUE			327
+ BenchmarkTest00001	crypto		TRUE				327
 ```
 
 This simply means that the first test case is a crypto test case (use of weak cryptographic algorithms), this is a real vulnerability (as opposed to a false positive), and this issue maps to CWE 327. It also indicates this expected results file is for Benchmark version 1.1 (produced May 22, 2015). There is a row in this file for each of the tens of thousands of test cases in the Benchmark. Each time a new version of the Benchmark is published, a new corresponding results file is generated and each test case can be completely different from one version to the next.
@@ -29,7 +29,7 @@ The Benchmark also comes with a bunch of different utilities, commands, and prep
 * Run a static vulnerability analysis tool (SAST) against the Benchmark test case code
 * Scan a running version of the Benchmark with a dynamic application security testing tool (DAST)
 	* Instructions on how to run it are provided below
-* Generate scorecards for each of the tools you have results files for
+* Generate scorecards for each of the tools you have results for
 	* See the Tool Support/Results page for the list of tools the Benchmark supports generating scorecards for
 
 ## Getting Started ##
@@ -63,19 +63,24 @@ We have several preconstructed VMs or instructions on how to build one that you 
 docker images  --> You should see the new benchmark:latest image in the list provided
 # The Benchmark Docker Image only has to be created once. 
 ```
-```Shell
 To run the Benchmark in your Docker VM, just run:
+```Shell
   ./runDockerImage.sh  --> This pulls in any updates to Benchmark since the Image was built, builds everything, and starts a remotely accessible Benchmark web app.
+```
 If successful, you should see this at the end:
+```Shell
   [INFO]_[talledLocalContainer] Tomcat 8.x started on port [8443]
   [INFO] Press Ctrl-C to stop the container...
+```
 Then simply navigate to: https://localhost:8443/benchmark from the machine you are running Docker
 
 Or if you want to access from a different machine:
+```Shell
  docker-machine ls (in a different terminal) --> To get IP Docker VM is exporting (e.g., tcp://192.168.99.100:2376)
  Navigate to: https://192.168.99.100:8443/benchmark in your browser (using the above IP as an example)
 ```
 * Amazon Web Services (AWS) - Here's how you set up the Benchmark on an AWS VM:
+
 ```Shell
 sudo yum install git
 sudo yum install maven
@@ -94,19 +99,15 @@ chmod 755 *.sh
 There are scripts for running each of the free SAST vulnerability detection tools included with the Benchmark against the Benchmark test cases. On Linux, you might have to make them executable (e.g., chmod 755 *.sh) before you can run them.
 
 Generating Test Results for PMD:
-    Shell
-    $ ./scripts/runPMD.sh (Linux) or .\scripts\runPMD.bat (Windows)
+    ./scripts/runPMD.sh (Linux) or .\scripts\runPMD.bat (Windows)
 
 Generating Test Results for FindBugs:
-    Shell
-    $ ./scripts/runFindBugs.sh (Linux) or .\scripts\runFindBugs.bat (Windows)
+    ./scripts/runFindBugs.sh (Linux) or .\scripts\runFindBugs.bat (Windows)
 
 Generating Test Results for FindBugs with the FindSecBugs plugin:
-    Shell
-    $ ./scripts/runFindSecBugs.sh (Linux) or .\scripts\runFindSecBugs.bat (Windows)
+    ./scripts/runFindSecBugs.sh (Linux) or .\scripts\runFindSecBugs.bat (Windows)
 
 In each case, the script will generate a results file and put it in the /results directory. For example:
-    Shell
     Benchmark_1.2-findbugs-v3.0.1-1026.xml
 
 This results file name is carefully constructed to mean the following: It's a results file against the OWASP Benchmark version 1.2, FindBugs was the analysis tool, it was version 3.0.1 of FindBugs, and it took 1026 seconds to run the analysis.
@@ -117,7 +118,6 @@ NOTE: If you create a results file yourself, by running a commercial tool for ex
 The scorecard generation application BenchmarkScore is included with the Benchmark. It parses the output files generated by any of the supported security tools run against the Benchmark and compares them against the expected results, and produces a set of web pages that detail the accuracy and speed of the tools involved. For the list of currently supported tools, check out the: Tools Support/Results tab. If you are using a tool that is not yet supported, simply send us a results file from that tool and we'll write a parser for that tool and add it to the supported tools list.
 
 The following command will compute a Benchmark scorecard for all the results files in the /results directory. The generated scorecard is put into the /scorecard directory.
-
 ```Shell
 createScorecard.sh (Linux) or createScorecard.bat (Windows)
 ```
