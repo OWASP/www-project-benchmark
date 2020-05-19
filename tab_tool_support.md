@@ -27,10 +27,10 @@ Note: We looked into supporting [Checkstyle](http://checkstyle.sourceforge.net/)
 
 * [CAST Application Intelligence Platform (AIP)](https://www.castsoftware.com/products/application-intelligence-platform) - .xml results file
 * [Checkmarx CxSAST](https://www.checkmarx.com/products/static-application-security-testing) - .xml results file
-* [HCL (Formally IBM) AppScan SAST (Standalone and Cloud)](https://www.hcltechsw.com/wps/portal/products/appscan/home) - .ozasmt or .xml results file
+* [HCL (Formerly IBM) AppScan SAST (Standalone and Cloud)](https://www.hcltechsw.com/wps/portal/products/appscan/home) - .ozasmt or .xml results file
 * [Julia Analyzer](https://juliasoft.com/solutions/julia-for-security/) - .xml results file
 * [Kiuwan Code Security](https://www.kiuwan.com/code-security-sast/) - .threadfix results file
-* [Micro Focus (Formally HPE) Fortify (On-Demand and stand-alone versions)](https://software.microfocus.com/en-us/products/static-code-analysis-sast/overview) - .fpr results file
+* [Micro Focus (Formerly HPE) Fortify (On-Demand and stand-alone versions)](https://software.microfocus.com/en-us/products/static-code-analysis-sast/overview) - .fpr results file
 * [Parasoft Jtest](https://www.parasoft.com/products/jtest/) - .xml results file
 * [Semmle LGTM](https://semmle.com/lgtm) - .sarif results file
 * [ShiftLeft SAST](https://www.shiftleft.io/product/) - .sl results file (Benchmark specific format. Ask vendor how to generate this)
@@ -59,8 +59,8 @@ Note: While we support scorecard generators for these Free and Commercial DAST t
 
 * [Acunetix Web Vulnerability Scanner (WVS)](https://www.acunetix.com/vulnerability-scanner/) - .xml results file ([see Exporting Scan Results (Generic XML export))](https://www.acunetix.com/resources/wvs11manual.pdf) was the command line /ExportXML switch) or .xml results file from Acunetix 360
 * [Burp Pro](https://portswigger.net/burp) - .xml results file
-* [HCL (Formally IBM) AppScan DAST](https://www.hcltechsw.com/wps/portal/products/appscan/home) - .xml results file
-* [Micro Focus (Formally HPE) Fortify WebInspect](https://www.microfocus.com/en-us/products/webinspect-dynamic-analysis-dast/overview) - .xml results file
+* [HCL (Formerly IBM) AppScan DAST](https://www.hcltechsw.com/wps/portal/products/appscan/home) - .xml results file
+* [Micro Focus (Formerly HPE) Fortify WebInspect](https://www.microfocus.com/en-us/products/webinspect-dynamic-analysis-dast/overview) - .xml results file
 * [Netsparker](https://www.netsparker.com/web-vulnerability-scanner/) - .xml results file
 * [Qualys Web App Scanner](https://www.qualys.com/apps/web-app-scanning/) - .xml results file
 * [Rapid7 AppSpider](https://www.rapid7.com/products/appspider/) - .xml results file
