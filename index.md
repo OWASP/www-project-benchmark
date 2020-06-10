@@ -21,5 +21,5 @@ The OWASP Benchmark Project is a Java test suite designed to evaluate the accura
 OWASP Benchmark is a fully runnable open source web application that contains thousands of exploitable test cases, each mapped to specific CWEs, which can be analyzed by any type of Application Security Testing (AST) tool, including SAST, DAST (like OWASP ZAP), and IAST tools. The intent is that all the vulnerabilities deliberately included in and scored by the Benchmark are actually exploitable so its a fair test for any kind of application vulnerability detection tool. The Benchmark also includes dozens of scorecard generators for numerous open source and commercial AST tools, and the set of supported tools is growing all the time.
 
 ## Related Projects
-* [NSA's Juliet for Java](http://samate.nist.gov/SARD/testsuite.php)
-* [The Web Application Vulnerability Scanner Evaluation Project (WAVSEP)](http://sectoolmarket.com/)
+* [NSA's Juliet for Java](https://samate.nist.gov/SARD/testsuite.php)
+* [The Web Application Vulnerability Scanner Evaluation Project (WAVSEP)](https://sectooladdict.blogspot.com/)

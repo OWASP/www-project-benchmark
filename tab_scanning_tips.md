@@ -74,11 +74,11 @@ We include this free tool in the Benchmark and its all dialed in. Simply run the
 
 **SpotBugs with FindSecBugs**
 
-[FindSecurityBugs](http://h3xstream.github.io/find-sec-bugs/) is a great plugin for SpotBugs that significantly increases the ability for SpotBugs to find security issues. We include this free tool in the Benchmark and its all dialed in. Simply run the script: ./script/runFindSecBugs.(sh or bat). If you want to run a different version of FindSecBugs, just change the version number of the findsecbugs-plugin artifact in the Benchmark pom.xml file.
+[FindSecurityBugs](https://find-sec-bugs.github.io/) is a great plugin for SpotBugs that significantly increases the ability for SpotBugs to find security issues. We include this free tool in the Benchmark and its all dialed in. Simply run the script: ./script/runFindSecBugs.(sh or bat). If you want to run a different version of FindSecBugs, just change the version number of the findsecbugs-plugin artifact in the Benchmark pom.xml file.
 
 **Xanitizer**
 
-The vendor has written their own guide to [How to Set Up Xanitizer for OWASP Benchmark](http://www.rigs-it.net/opendownloads/whitepapers/HowToSetUpXanitizerForOWASPBenchmarkProject.pdf).
+The vendor has written their own guide to [How to Set Up Xanitizer for OWASP Benchmark](https://www.rigs-it.com/wp-content/uploads/2018/03/howtosetupxanitizerforowaspbenchmarkproject.pdf).
 
 ## DAST Tools ##
 **Burp Pro**
