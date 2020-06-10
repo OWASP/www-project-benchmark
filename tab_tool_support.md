@@ -7,7 +7,7 @@ order: 4
 tags: benchmark
 ---
 
-The results for 5 free tools, PMD, FindBugs, FindBugs with the FindSecBugs plugin, SonarQube and OWASP ZAP are available here against version 1.2 of the Benchmark: (https://rawgit.com/OWASP/Benchmark/master/scorecard/OWASP_Benchmark_Home.html). We've included multiple versions of FindSecBugs' and ZAP's results so you can see the improvements they are making finding vulnerabilities in Benchmark.
+The results, from several years ago, for 5 free tools, PMD, FindBugs, FindBugs with the FindSecBugs plugin, SonarQube and OWASP ZAP are available here against version 1.2 of the Benchmark: [https://rawgit.com/OWASP/Benchmark/master/scorecard/OWASP_Benchmark_Home.html](https://rawgit.com/OWASP/Benchmark/master/scorecard/OWASP_Benchmark_Home.html). We've included multiple versions of FindSecBugs' and ZAP's results so you can see the improvements they are making finding vulnerabilities in Benchmark.
 
 We have Benchmark results for all the following tools, but haven't publicly released the results for any commercial tools. However, we included a 'Commercial Average' page, which includes a summary of results for 6 commercial SAST tools along with anonymous versions of each SAST tool's scorecard.
 
@@ -60,7 +60,7 @@ Note: While we support scorecard generators for these Free and Commercial DAST t
 * [Acunetix Web Vulnerability Scanner (WVS)](https://www.acunetix.com/vulnerability-scanner/) - .xml results file ([see Exporting Scan Results (Generic XML export))](https://www.acunetix.com/resources/wvs11manual.pdf) was the command line /ExportXML switch) or .xml results file from Acunetix 360
 * [Burp Pro](https://portswigger.net/burp) - .xml results file
 * [HCL (Formally IBM) AppScan DAST](https://www.hcltechsw.com/wps/portal/products/appscan/home) - .xml results file
-* [Micro Focus (Formally HPE) Fortify WebInspect](https://www.microfocus.com/en-us/products/webinspect-dynamic-analysis-dast/overview) - .xml results file
+* [Micro Focus Fortify WebInspect](https://www.microfocus.com/en-us/products/webinspect-dynamic-analysis-dast/overview) - .xml results file
 * [Netsparker](https://www.netsparker.com/web-vulnerability-scanner/) - .xml results file
 * [Qualys Web App Scanner](https://www.qualys.com/apps/web-app-scanning/) - .xml results file
 * [Rapid7 AppSpider](https://www.rapid7.com/products/appspider/) - .xml results file
