@@ -41,7 +41,7 @@ Note: We looked into supporting [Checkstyle](https://checkstyle.sourceforge.io/)
 * [Veracode SAST](https://www.veracode.com/products/binary-static-analysis-sast) - .xml results file
 * [XANITIZER](https://www.rigs-it.com/xanitizer/) - .xml results file ([Their white paper on how to setup Xanitizer to scan Benchmark](https://www.rigs-it.com/wp-content/uploads/2018/03/howtosetupxanitizerforowaspbenchmarkproject.pdf).) (Free trial available)
 
-We are looking for results for other commercial static analysis tools like: [Grammatech CodeSonar](https://www.grammatech.com/products/codesonar), [Parasoft's Klocwork](https://www.perforce.com/products/klocwork), etc. If you have a license for any static analysis tool not already listed above and can run it on the Benchmark and send us the results file that would be very helpful.
+We are looking for results for other commercial static analysis tools like: [Perforce's Klocwork](https://www.perforce.com/products/klocwork), etc. If you have a license for any static analysis tool not already listed above and can run it on the Benchmark and send us the results file that would be very helpful.
 
 The free SAST tools come bundled with the Benchmark so you can run them yourselves. If you have a license for any commercial SAST tool, you can also run them against the Benchmark. Just put your results files in the /results folder of the project, and then run the BenchmarkScore script for your platform (.sh / .bat) and it will generate a scorecard in the /scorecard directory for all the tools you have results for that are currently supported.
 
