@@ -40,7 +40,7 @@ Therefore, in order to receive an OWASP score untainted by dead code, re-configu
 
 Kiuwan Code Security wrote their own instructions for scanning the OWASP Benchmark. Refer to their [step-by-step guide](https://www.kiuwan.com/blog/owasp-benchmark-diy/) on the Kiuwan website.
 
-**Micro Focus (Formally HP) Fortify**
+**Micro Focus (Formerly HP) Fortify**
 
 If you are using the Audit Workbench, you can give it more memory and make sure you invoke it in 64-bit mode by doing this:
 ```Shell
