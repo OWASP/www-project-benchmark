@@ -36,9 +36,9 @@ The Benchmark also comes with a bunch of different utilities, commands, and prep
 Before downloading or using the Benchmark make sure you have the following installed and configured properly:
 
 ```Shell
-GIT: http://git-scm.com/ or https://github.com/
+GIT: https://git-scm.com/ or https://github.com/
 Maven: https://maven.apache.org/  (Version: 3.2.3 or newer works.)
-Java: http://www.oracle.com/technetwork/java/javase/downloads/index.html (Java 7 or 8) (64-bit)
+Java: https://www.oracle.com/java/technologies/javase-downloads.html (Java 7 or 8) (64-bit)
 ```
 
 ## Getting, Building, and Running the Benchmark ##

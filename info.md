@@ -1,3 +1,13 @@
+### Project Classification
+* <i class="fas fa-flask" style="font-size: 1.2em; color:#FFA500;"></i><span style="font-size:1.0em;padding-left:12px;">Lab Project</span>
+
+### Classification
+* <i class="fas fa-tools" style="font-size: 1.2em; color:#233e81;"></i><span style="font-size:1.0em;padding-left:12px;">Tool</span>
+
+### Audience
+* <i class="fas fa-toolbox" style="font-size: 1.2em; color:#233e81;"></i><span style="font-size:1.0em;padding-left:12px;">Builder</span> 
+* <i class="fas fa-shield-alt" style="font-size: 1.2em; color:#233e81;"></i><span style="font-size:1.0em;padding-left:12px;">Defender</span>
+
 ### Code Repository
 * [Source code](https://github.com/OWASP/Benchmark)
 
@@ -12,10 +22,3 @@
 ### Licensing
 * [GNU GPL v2.0](http://choosealicense.com/licenses/gpl-2.0/)
 
-### Project Classification
-[![Lab Project](https://www2.owasp.org/assets/images/common/owasp_level_labs.svg)](https://www.owasp.org/index.php/OWASP_Project_Stages#Lab_Projects)
-
-[![Builders](https://www2.owasp.org/assets/images/common/owasp_builders.svg)](https://www.owasp.org/index.php/Builders)
-[![Defenders](https://www2.owasp.org/assets/images/common/owasp_defenders.svg)](https://www.owasp.org/index.php/Defenders)
-
-[![Tool Project](https://www2.owasp.org/assets/images/common/owasp_tool_project.svg)](https://www.owasp.org/index.php/Category:OWASP_Tool)
