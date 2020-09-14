@@ -17,6 +17,7 @@ The Benchmark can generate results for the following tools:
 
 * [PMD](https://pmd.github.io/) (which really has no security rules) - .xml results file
 * [FindBugs](http://findbugs.sourceforge.net/) - .xml results file (Note: FindBugs hasn't been updated since 2015. Use SpotBugs instead (see below))
+* [Semgrep] (https://semgrep.dev/) - .json results file (e.g., semgrep -f https://semgrep.dev/p/r2c-security-audit . --json > results/Benchmark_1.2-Semgrep.json)
 * [SonarQube](https://www.sonarqube.org/downloads/) - .xml results file
 * [SpotBugs](https://spotbugs.github.io/) - .xml results file. This is the successor to FindBugs.
 * SpotBugs with the [FindSecurityBugs plugin](https://find-sec-bugs.github.io/) - .xml results file
