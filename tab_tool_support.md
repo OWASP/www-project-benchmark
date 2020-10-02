@@ -56,7 +56,7 @@ Note: While we support scorecard generators for these Free and Commercial DAST t
 * [OWASP ZAP](/www-project-zap/) - .xml results file. To generate a complete ZAP XML results file so you can generate a valid scorecard, make sure you:
 	* Tools > Options > Alerts - And set the Max alert instances to like 500.
 	* Then: Report > Generate XML Report...
-* [Wapiti] (https://wapiti.sourceforge.io/) - .xml results file.
+* [Wapiti](https://wapiti.sourceforge.io/) - .xml results file.
 
 **Commercial DAST Tools:**
 
