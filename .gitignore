@@ -3,3 +3,4 @@ env
 .vscode
 .project
 _site
+/Gemfile.lock
