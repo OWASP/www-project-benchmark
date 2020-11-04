@@ -23,6 +23,8 @@ The Benchmark can generate results for the following tools:
 * SpotBugs with the [FindSecurityBugs plugin](https://find-sec-bugs.github.io/) - .xml results file
 * [Visual Code Grepper](https://sourceforge.net/projects/visualcodegrepp/) - [Soure Code here](https://github.com/nccgroup/VCG) - .xml results file
 
+Many of these free SAST tools come bundled with Benchmark so you can run them yourselves. Simply run script/runTOOLNAME.(sh/bat) and it puts the results into the /results directory automatically. There are scripts for running PMD, FindBugs, SpotBugs, and FindSecBugs.
+
 Note: We looked into supporting [Checkstyle](https://checkstyle.sourceforge.io/) but it has no security rules, just like PMD. The [fb-contrib FindBugs plugin](http://fb-contrib.sourceforge.net/) doesn't have any security rules either. We did test [Error Prone](https://errorprone.info/), and found that it does report some use of [insecure ciphers (CWE-327)](https://errorprone.info/bugpattern/InsecureCryptoUsage), but that's it.
 
 **Commercial SAST Tools:**
@@ -43,13 +45,13 @@ Note: We looked into supporting [Checkstyle](https://checkstyle.sourceforge.io/)
 * [Veracode SAST](https://www.veracode.com/products/binary-static-analysis-sast) - .xml results file
 * [XANITIZER](https://www.rigs-it.com/xanitizer/) - .xml results file ([Their white paper on how to setup Xanitizer to scan Benchmark](https://www.rigs-it.com/wp-content/uploads/2018/03/howtosetupxanitizerforowaspbenchmarkproject.pdf).) (Free trial available)
 
-We are looking for results for other commercial static analysis tools like: [Perforce's Klocwork](https://www.perforce.com/products/klocwork), etc. If you have a license for any static analysis tool not already listed above and can run it on the Benchmark and send us the results file that would be very helpful.
+We are looking for results for other commercial SAST tools. If you have a license for any static analysis tool not already listed above and can run it on Benchmark and send us the results file that would be very helpful.
 
-The free SAST tools come bundled with the Benchmark so you can run them yourselves. If you have a license for any commercial SAST tool, you can also run them against the Benchmark. Just put your results files in the /results folder of the project, and then run the BenchmarkScore script for your platform (.sh / .bat) and it will generate a scorecard in the /scorecard directory for all the tools you have results for that are currently supported.
+If you have a license for any commercial SAST tool, you can also run them against the Benchmark. Just put your results files in the /results folder of the project, and then run createScorecards.sh/.bat and it will generate a scorecard in the /scorecard directory for all the tool results you have that are currently supported.
 
 **Free Dynamic Application Security Testing (DAST) Tools:**
 
-Note: While we support scorecard generators for these Free and Commercial DAST tools, we haven't been able to get a full/clean run against the Benchmark from most of these tools. As such, some of these scorecard generators might still need some work to properly reflect their results. If you notice any problems, let us know.
+Note: While we support scorecard generators for these Free and Commercial DAST tools, it can be difficult to get a full/clean run against the Benchmark. As such, some of these scorecard generators might need some additional work to properly reflect their results. If you notice any problems, let us know.
 
 * [Arachni](https://www.arachni-scanner.com/) - .xml results file
 	* To generate .xml, run: ./bin/arachni_reporter "Your_AFR_Results_Filename.afr" --reporter=xml:outfile=Benchmark1.2-Arachni.xml
