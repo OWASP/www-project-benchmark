@@ -15,6 +15,9 @@
 * [Git clone URL](https://github.com/OWASP/Benchmark.git)
 * [Docker Image](https://hub.docker.com/r/owasp/benchmark)
 
+### Introductory Materials
+* [OWASP Benchmark Podcast](https://soundcloud.com/owasp-podcast/owasp-benchmark-project-w-dave-wichers)
+
 ### Contacts
 * [Report an issue](https://github.com/OWASP/Benchmark/issues)
 * [Contributing](mailto://dave.wichers@owasp.org)
