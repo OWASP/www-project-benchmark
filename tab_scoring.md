@@ -7,7 +7,7 @@ tags: benchmark
 ---
 
 
-<link rel="stylesheet" href="/assets/css/styles.css">
+<link rel="stylesheet" href="/www-project-benchmark/assets/css/styles.css">
 
 ## Introduction ##
 One of the unique things about OWASP Benchmark is that it is very easy to score a tool's security analysis results against it. Each test case in Benchmark has a single intentional CWE that is either a True or False Positive. These are documented in the expectedresults-1.2.csv file. The project includes automated scorecard generators for dozens of security tools that can automatically score a tool's results against Benchmark. The following describes the Benchmark scoring scheme, reporting format, and how to actually generate Benchmark scores for tools.
