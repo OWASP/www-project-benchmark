@@ -1,0 +1,10 @@
+table {
+    display: block;
+    table-layout: fixed;
+    width: 800px;
+    overflow: scroll;
+}
+
+th {
+    min-width: 150px;
+}
