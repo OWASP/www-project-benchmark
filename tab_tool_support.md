@@ -32,18 +32,18 @@ Note: We looked into supporting [Checkstyle](https://checkstyle.sourceforge.io/)
 * [CAST Application Intelligence Platform (AIP)](https://www.castsoftware.com/products/application-intelligence-platform) - .xml results file
 * [Checkmarx CxSAST](https://www.checkmarx.com/products/static-application-security-testing) - .xml results file
 * [HCL (Formerly IBM) AppScan SAST (Standalone and Cloud)](https://www.hcltechsw.com/wps/portal/products/appscan/home) - .ozasmt or .xml results file
-* [Julia Analyzer](https://juliasoft.com/solutions/julia-for-security/) - .xml results file
+* [Julia Analyzer](https://juliasoft.com) - Acquired by Grammatech. No parser for this new solution yet.
 * [Kiuwan Code Security](https://www.kiuwan.com/code-security-sast/) - .threadfix results file
 * [Micro Focus (Formerly HPE) Fortify (On-Demand and stand-alone versions)](https://software.microfocus.com/en-us/products/static-code-analysis-sast/overview) - .fpr results file
 * [Parasoft Jtest](https://www.parasoft.com/products/jtest/) - .xml results file
 * [Semmle LGTM](https://semmle.com/lgtm) - .sarif results file
 * [ShiftLeft SAST](https://www.shiftleft.io/product/) - .sl results file (Benchmark specific format. Ask vendor how to generate this)
 * [Snappycode Audit's SnappyTick Source Edition (SAST)](https://snappycodeaudit.com/category/static-code-analysis) - .xml results file
-* [SourceMeter](https://www.sourcemeter.com/features/) - .txt results file of ALL results from VulnerabilityHunter
+* [SourceMeter](https://www.sourcemeter.com) - .txt results file of ALL results from VulnerabilityHunter
 * [Synopsys Coverity SAST (Formerly Coverity Code Advisor) (On-Demand and stand-alone versions)](https://www.synopsys.com/software-integrity/security-testing/static-analysis-sast.html) - .json results file (You can scan Benchmark w/Coverity for free. See: https://scan.coverity.com/)
 * [Thunderscan SAST](https://www.defensecode.com/thunderscan.php) - .xml results file
 * [Veracode SAST](https://www.veracode.com/products/binary-static-analysis-sast) - .xml results file
-* [XANITIZER](https://www.rigs-it.com/xanitizer/) - .xml results file ([Their white paper on how to setup Xanitizer to scan Benchmark](https://www.rigs-it.com/wp-content/uploads/2018/03/howtosetupxanitizerforowaspbenchmarkproject.pdf).) (Free trial available)
+* [XANITIZER](https://www.xanitizer.com/xanitizer/) - .xml results file ([Their white paper on how to setup Xanitizer to scan Benchmark](https://www.xanitizer.com/wp-content/uploads/howtosetupxanitizerforowaspbenchmarkproject.pdf).) (Free trial available)
 
 We are looking for results for other commercial SAST tools. If you have a license for any static analysis tool not already listed above and can run it on Benchmark and send us the results file that would be very helpful.
 

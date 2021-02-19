@@ -78,7 +78,7 @@ We include this free tool in the Benchmark and its all dialed in. Simply run the
 
 **Xanitizer**
 
-The vendor has written their own guide to [How to Set Up Xanitizer for OWASP Benchmark](https://www.rigs-it.com/wp-content/uploads/2018/03/howtosetupxanitizerforowaspbenchmarkproject.pdf).
+The vendor has written their own guide to [How to Set Up Xanitizer for OWASP Benchmark](https://www.xanitizer.com/wp-content/uploads/howtosetupxanitizerforowaspbenchmarkproject.pdf).
 
 ## DAST Tools ##
 **Burp Pro**

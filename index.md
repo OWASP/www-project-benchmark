@@ -14,7 +14,7 @@ pitch: The OWASP Benchmark Project is a Java test suite designed to evaluate the
 
 <!-- rebuild 40 -->
 
-[![OWASP Lab](https://img.shields.io/badge/owasp-lab%20project-yellow)](https://www2.owasp.org/projects#div-lab)
+[![OWASP Lab](https://img.shields.io/badge/owasp-lab%20project-yellow)](https://www.owasp.org/projects)
 
 ## OWASP Benchmark Project
 
