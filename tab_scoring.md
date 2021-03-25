@@ -54,7 +54,7 @@ That's it!
 
 Full details on how to do this are at the bottom of the page on the Quick Start tab.
 
-We encourage both vendors, open source tools, and end users to verify their application security tools against the Benchmark. In order to ensure that the results are fair and useful, we ask that you follow a few simple rules when publishing results. We won't recognize any results that aren't easily reproducible:
+We encourage both vendors, open-source tools, and end users to verify their application security tools against the Benchmark. In order to ensure that the results are fair and useful, we ask that you follow a few simple rules when publishing results. We won't recognize any results that aren't easily reproducible:
 
 1. A description of the default "out-of-the-box" installation, version numbers, etc.
 2. Any and all configuration, tailoring, onboarding, etc. performed to make the tool run
@@ -66,12 +66,12 @@ The Benchmark includes tools to interpret raw tool output, compare it to the exp
 
 Security Category | TP | FN | TN | FP | Total | TPR | FPR | Score
 ----------------- | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ | ------------------
-**General security category for test cases.** | **True Positives**: Tests with real vulnerabilities that were correctly reported as vulnerable by the tool. | **False Negative**: Tests with real vulnerabilities that were not correctly reported as vulnerable by the tool. | **True Negative**: Tests with fake vulnerabilities that were correctly not reported as vulnerable by the tool. | **False Positive**: Tests with fake vulnerabilities that were incorrectly reported as vulnerable by the tool. | Total test cases for this category. | **True Positive Rate**: TP / ( TP + FN ) - Also referred to as Precision, as defined at [Wikipedia](https://en.wikipedia.org/wiki/Precision_and_recall). | **False Positive Rate**: FP / ( FP + TN ). | Normalized distance from the "guess line" TPR - FPR.
+**General security category for test cases.** | **True Positives**: Tests with real vulnerabilities that were correctly reported as vulnerable by the tool. | **False Negative**: Tests with real vulnerabilities that were not correctly reported as vulnerable by the tool. | **True Negative**: Tests with fake vulnerabilities that were correctly not reported as vulnerable by the tool. | **False Positive**: Tests with fake vulnerabilities that were incorrectly reported as vulnerable by the tool. | Total test cases for this category. | **True Positive Rate**: TP / ( TP + FN ) - Also referred to as Recall, as defined at [Wikipedia](https://en.wikipedia.org/wiki/Precision_and_recall). | **False Positive Rate**: FP / ( FP + TN ). | Normalized distance from the "guess line" TPR - FPR.
 Command Injection | ... | ... | ... | ... | ... | ... | ... | ...
 Etc. | ... | ... | ... | ... | ... | ... | ... | ...
    | **Total TP** | **Total FN** | **Total TN** | **Total FP** | **Total TC** | **Average TPR** | **Average FPR** | **Average Score**
 
 ## Benchmark Validity ##
-To be clear, the Benchmark tests are not exactly like real applications. The tests are derived from coding patterns observed in real applications, but the majority of them are considerably simpler than real applications. That is, most real world applications will be considerably harder to successfully analyze than the OWASP Benchmark Test Suite. Although the tests are based on real code, it is possible that some tests may have coding patterns that don't occur frequently in real code.
+To be clear, the Benchmark tests are not exactly like real applications. The tests are derived from coding patterns observed in real applications, but the majority of them are considerably simpler than real applications. That is, most real-world applications will be considerably harder to successfully analyze than the OWASP Benchmark Test Suite. Although the tests are based on real code, it is possible that some tests may have coding patterns that don't occur frequently in real code.
 
 Remember, we are trying to test the capabilities of the tools and make them explicit, so that users can make informed decisions about what tools to use, how to use them, and what results to expect. This is exactly aligned with the OWASP mission to make application security visible.
