@@ -76,8 +76,10 @@ If you have access to other DAST Tools, PLEASE RUN THEM FOR US against the Bench
 **Commercial Interactive Application Security Testing (IAST) Tools:**
 
 * [Checkmarx CxIAST](https://www.checkmarx.com/products/interactive-application-security-testing) - .csv results file
-* [Contrast Assess](https://www.contrastsecurity.com/interactive-application-security-testing-iast) - .zip results file (You can scan Benchmark w/Contrast for free. See: https://www.contrastsecurity.com/contrast-community-edition)
+* [Contrast Assess](https://www.contrastsecurity.com/interactive-application-security-testing-iast) - .log results file (You can scan Benchmark w/Contrast for free. See: https://www.contrastsecurity.com/contrast-community-edition)
 * [Hdiv Detection (IAST)](https://hdivsecurity.com/interactive-application-security-testing-iast) - .hlg results file
+* [SecZone VulHunter IAST](https://www.seczone.cn/channels/SDL-IAST.html) - .log results file
+** You'll have to ask the vendor how to generate this file.
 * [Synopsys Seeker IAST](https://www.synopsys.com/software-integrity/security-testing/interactive-application-security-testing.html) - .csv results file
 
 **Commercial Hybrid Analysis Application Security Testing Tools:**
