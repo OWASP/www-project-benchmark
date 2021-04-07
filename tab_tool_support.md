@@ -17,7 +17,8 @@ The Benchmark can generate results for the following tools:
 
 * [PMD](https://pmd.github.io/) (which really has no security rules) - .xml results file
 * [FindBugs](http://findbugs.sourceforge.net/) - .xml results file (Note: FindBugs hasn't been updated since 2015. Use SpotBugs instead (see below))
-* [Semgrep] (https://semgrep.dev/) - .json results file (e.g., semgrep -f https://semgrep.dev/p/r2c-security-audit . --json > results/Benchmark_1.2-Semgrep.json)
+* [Semgrep](https://semgrep.dev/) - .json results file
+	* e.g., semgrep -f https://semgrep.dev/p/r2c-security-audit . --json > results/Benchmark_1.2-Semgrep.json
 * [SonarQube](https://www.sonarqube.org/downloads/) - .xml results file
 * [SpotBugs](https://spotbugs.github.io/) - .xml results file. This is the successor to FindBugs.
 * SpotBugs with the [FindSecurityBugs plugin](https://find-sec-bugs.github.io/) - .xml results file
@@ -76,7 +77,8 @@ If you have access to other DAST Tools, PLEASE RUN THEM FOR US against the Bench
 **Commercial Interactive Application Security Testing (IAST) Tools:**
 
 * [Checkmarx CxIAST](https://www.checkmarx.com/products/interactive-application-security-testing) - .csv results file
-* [Contrast Assess](https://www.contrastsecurity.com/interactive-application-security-testing-iast) - .log results file (You can scan Benchmark w/Contrast for free. See: https://www.contrastsecurity.com/contrast-community-edition)
+* [Contrast Assess](https://www.contrastsecurity.com/interactive-application-security-testing-iast) - .log results file
+	* You can scan Benchmark w/Contrast for free. See: https://www.contrastsecurity.com/contrast-community-edition
 * [Hdiv Detection (IAST)](https://hdivsecurity.com/interactive-application-security-testing-iast) - .hlg results file
 * [SecZone VulHunter IAST](https://www.seczone.cn/channels/SDL-IAST.html) - .log results file
 	* You'll have to ask the vendor how to generate this file.
