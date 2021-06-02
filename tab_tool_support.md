@@ -15,8 +15,10 @@ The Benchmark can generate results for the following tools:
 
 **Free Static Application Security Testing (SAST) Tools:**
 
-* [PMD](https://pmd.github.io/) (which really has no security rules) - .xml results file
 * [FindBugs](http://findbugs.sourceforge.net/) - .xml results file (Note: FindBugs hasn't been updated since 2015. Use SpotBugs instead (see below))
+* [Horusec](https://github.com/ZupIT/horusec) - .json results file
+* [Insider](https://github.com/insidersec/insider) - .json results file
+* [PMD](https://pmd.github.io/) (which really has no security rules) - .xml results file
 * [Semgrep](https://semgrep.dev/) - .json results file
 	* e.g., semgrep -f https://semgrep.dev/p/r2c-security-audit . --json > results/Benchmark_1.2-Semgrep.json
 * [SonarQube](https://www.sonarqube.org/downloads/) - .xml results file
@@ -56,10 +58,10 @@ Note: While we support scorecard generators for these Free and Commercial DAST t
 
 * [Arachni](https://www.arachni-scanner.com/) - .xml results file
 	* To generate .xml, run: ./bin/arachni_reporter "Your_AFR_Results_Filename.afr" --reporter=xml:outfile=Benchmark1.2-Arachni.xml
-* [OWASP ZAP](/www-project-zap/) - .xml results file. To generate a complete ZAP XML results file so you can generate a valid scorecard, make sure you:
+* [OWASP ZAP](/www-project-zap/) - .json or .xml results file. To generate a complete ZAP results file so you can generate a valid scorecard, make sure you:
 	* Tools > Options > Alerts - And set the Max alert instances to like 500.
 	* Then: Report > Generate XML Report...
-* [Wapiti](https://wapiti.sourceforge.io/) - .xml results file.
+* [Wapiti](https://wapiti.sourceforge.io/) - .json or .xml results file.
 
 **Commercial DAST Tools:**
 
