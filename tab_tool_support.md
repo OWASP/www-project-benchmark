@@ -7,20 +7,22 @@ order: 4
 tags: benchmark
 ---
 
-The results, from several years ago, for 5 free tools, PMD, FindBugs, FindBugs with the FindSecBugs plugin, SonarQube and OWASP ZAP are available here against version 1.2 of the Benchmark: [https://rawgit.com/OWASP/Benchmark/master/scorecard/OWASP_Benchmark_Home.html](https://rawgit.com/OWASP/Benchmark/master/scorecard/OWASP_Benchmark_Home.html). We've included multiple versions of FindSecBugs' and ZAP's results so you can see the improvements they are making finding vulnerabilities in Benchmark.
+The results, from several years ago, for 5 free tools, PMD, FindBugs, FindBugs with the FindSecBugs plugin, SonarQube, and OWASP ZAP are available here against version 1.2 of the Benchmark: [https://rawgit.com/OWASP/Benchmark/master/scorecard/OWASP_Benchmark_Home.html](https://rawgit.com/OWASP/Benchmark/master/scorecard/OWASP_Benchmark_Home.html). We included multiple versions of FindSecBugs' and ZAP's results so you can see the improvements they made finding vulnerabilities in Benchmark.
 
-We have Benchmark results for all the following tools, but haven't publicly released the results for any commercial tools. However, we included a 'Commercial Average' page, which includes a summary of results for 6 commercial SAST tools along with anonymous versions of each SAST tool's scorecard.
+We have Benchmark results for all the following tools, but haven't publicly released the results for any commercial tools. However, we included a 'Commercial Average' page, which includes a summary of results for 6 commercial SAST tools in 2016 along with anonymous versions of each SAST tool's scorecard.
 
 The Benchmark can generate results for the following tools:
 
 **Free Static Application Security Testing (SAST) Tools:**
 
-* [FindBugs](http://findbugs.sourceforge.net/) - .xml results file (Note: FindBugs hasn't been updated since 2015. Use SpotBugs instead (see below))
+* [FindBugs](http://findbugs.sourceforge.net/) - .xml results file
+	* Note: FindBugs hasn't been updated since 2015. Use SpotBugs instead (see below)
 * [Horusec](https://github.com/ZupIT/horusec) - .json results file
 * [Insider](https://github.com/insidersec/insider) - .json results file
 * [PMD](https://pmd.github.io/) (which really has no security rules) - .xml results file
 * [Semgrep](https://semgrep.dev/) - .json results file
 	* e.g., semgrep -f https://semgrep.dev/p/r2c-security-audit . --json > results/Benchmark_1.2-Semgrep.json
+* [ShiftLeft Scan](https://github.com/ShiftLeftSecurity/sast-scan) - .json results file (found at reports/scan-full-report.json)
 * [SonarQube](https://www.sonarqube.org/downloads/) - .xml results file
 * [SpotBugs](https://spotbugs.github.io/) - .xml results file. This is the successor to FindBugs.
 * SpotBugs with the [FindSecurityBugs plugin](https://find-sec-bugs.github.io/) - .xml results file
