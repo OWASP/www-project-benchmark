@@ -36,6 +36,18 @@ Therefore, in order to receive an OWASP score untainted by dead code, re-configu
 3. Add the commented text of the original query to the new override query.
 4. Save the queries.
 
+**CodeQL**
+
+To use the CodeQL command line interface (CLI) on Benchmark, first install CodeQL and its rules databases per: https://codeql.github.com/docs/codeql-cli/using-the-codeql-cli/ (i.e., codeql and the codeql-repo).
+
+Once this is done, do the following:
+* Navigate to the OWASP Benchmark project directory
+* ~/PATHTO/codeql/codeql database create owasp-benchmark --languages java
+** Note: You might have to disable the rule: codeql-repo/java/ql/src/Security/CWE/CWE-020/ExternalAPIsUsedWithUntrustedData.ql if it is still broken. To disable, rename to different extension or just delete this file.
+* ~/PATHTO/codeql/codeql database analyze owasp-benchmark java-code-scanning.qls --format=sarifv2.1.0 --output=results/Benchmark-CodeQL.sarif
+
+You can also try different CodeQL query suites other than: java-code-scanning.qls. To get a list, run: ~/PATHTO/codeql/codeql database analyze owasp-benchmark --format=sarifv2.1.0 --output=results/Benchmark-CodeQL.sarif. When you do, a usage message will be displayed. Something like: "No queries were specified ... one of these query suites might be what you want?"  And then a list is displayed. 5 different query suites starting with 'java-' were listed when we ran it.
+
 **Kiuwan Code Security**
 
 Kiuwan Code Security wrote their own instructions for scanning the OWASP Benchmark. Refer to their [step-by-step guide](https://www.kiuwan.com/blog/owasp-benchmark-diy/) on the Kiuwan website.
@@ -131,9 +143,9 @@ To use Contrast Assess, we simply add the Java agent to the Benchmark environmen
       $ cd Benchmark
       $ mvn compile
 ```
-* Download a licensed copy of the Contrast Assess Java Agent (contrast.jar) from your Contrast TeamServer account and put it in the /Benchmark/tools/Contrast directory.
+* Download a copy of the Contrast Java Agent configuration file (contrast.yaml) from your Contrast TeamServer account and put it in the /Benchmark/tools/Contrast directory.
 ```Shell
-      $ cp ~/Downloads/contrast.jar tools/Contrast
+      $ mv ~/Downloads/contrast.yaml tools/Contrast
 ```
 
 * In Terminal 1, launch the Benchmark application and wait until it starts
