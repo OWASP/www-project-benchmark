@@ -43,10 +43,9 @@ To use the CodeQL command line interface (CLI) on Benchmark, first install CodeQ
 Once this is done, do the following:
 * Navigate to the OWASP Benchmark project directory
 * ~/PATHTO/codeql/codeql database create owasp-benchmark --languages java
-** Note: You might have to disable the rule: codeql-repo/java/ql/src/Security/CWE/CWE-020/ExternalAPIsUsedWithUntrustedData.ql if it is still broken. To disable, rename to different extension or just delete this file.
-* ~/PATHTO/codeql/codeql database analyze owasp-benchmark java-code-scanning.qls --format=sarifv2.1.0 --output=results/Benchmark-CodeQL.sarif
+* ~/PATHTO/codeql/codeql database analyze owasp-benchmark java-security-and-quality.qls --format=sarifv2.1.0 --output=results/Benchmark-CodeQL.sarif
 
-You can also try different CodeQL query suites other than: java-code-scanning.qls. To get a list, run: ~/PATHTO/codeql/codeql database analyze owasp-benchmark --format=sarifv2.1.0 --output=results/Benchmark-CodeQL.sarif. When you do, a usage message will be displayed. Something like: "No queries were specified ... one of these query suites might be what you want?"  And then a list is displayed. 5 different query suites starting with 'java-' were listed when we ran it.
+You can also try different CodeQL query suites other than: java-code-scanning.qls. To get a list, run: ~/PATHTO/codeql/codeql database analyze owasp-benchmark --format=sarifv2.1.0 --output=results/Benchmark-CodeQL.sarif. When you do, a usage message will be displayed. Something like: "No queries were specified ... one of these query suites might be what you want?"  And then a list is displayed. 5 different query suites starting with 'java-' were listed when we ran it. We determined that only 2 query suites include their Weak Random rule (java-security-and-quality.qls and java-lgtm-full.qls).
 
 **Kiuwan Code Security**
 
