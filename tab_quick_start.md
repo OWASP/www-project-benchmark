@@ -45,7 +45,7 @@ Java: https://www.oracle.com/java/technologies/javase-downloads.html (Java 7 or 
 To download and build everything:
 
 ```Shell
-$ git clone https://github.com/OWASP/benchmark 
+$ git clone https://github.com/OWASP-Benchmark/BenchmarkJava
 $ cd benchmark
 $ mvn compile   (This compiles it)
 $ runBenchmark.sh/.bat - This compiles and runs it.
@@ -88,7 +88,7 @@ sudo yum install mvn
 sudo wget http://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo -O /etc/yum.repos.d/epel-apache-maven.repo
 sudo sed -i s/\$releasever/6/g /etc/yum.repos.d/epel-apache-maven.repo
 sudo yum install -y apache-maven
-git clone https://github.com/OWASP/benchmark
+git clone https://github.com/OWASP-Benchmark/BenchmarkJava
 cd benchmark
 chmod 755 *.sh
 ./runBenchmark.sh -- to run it locally on the VM.

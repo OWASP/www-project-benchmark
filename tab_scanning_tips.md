@@ -134,15 +134,15 @@ Interactive Application Security Testing (IAST) tools work differently than scan
 
 **Contrast Assess**
 
-To use Contrast Assess, we simply add the Java agent to the Benchmark environment and run the BenchmarkCrawler. The entire process should only take a few minutes. We provided a few scripts, which simply add the -javaagent:contrast.jar flag to the Benchmark launch configuration. We have tested on MacOS, Ubuntu, and Windows. Be sure your VM has at least 4M of memory.
+To use Contrast Assess, we simply add the Java agent to the Benchmark environment and run the BenchmarkCrawler. The entire process should only take a few minutes. We provided a few scripts, which simply add the -javaagent:contrast.jar flag to the Benchmark launch configuration. We have tested on MacOS, Ubuntu, and Windows. Be sure your machine or VM has at least 4M of memory.
 
 * Ensure your environment has Java, Maven, and git installed, then build the Benchmark project
 ```Shell
-      $ git clone https://github.com/OWASP/Benchmark.git
+      $ git clone https://github.com/OWASP-Benchmark/BenchmarkJava.git
       $ cd Benchmark
       $ mvn compile
 ```
-* Download a copy of the Contrast Java Agent configuration file (contrast.yaml) from your Contrast TeamServer account and put it in the /Benchmark/tools/Contrast directory.
+* Download a copy of the Contrast Java Agent configuration file (contrast.yaml) from your Contrast TeamServer account and put it in the tools/Contrast directory.
 ```Shell
       $ mv ~/Downloads/contrast.yaml tools/Contrast
 ```
@@ -165,7 +165,7 @@ To use Contrast Assess, we simply add the Java agent to the Benchmark environmen
 ```Shell
       $ ./runCrawler.sh (.bat on Windows)
 ```
-* A Contrast report has been generated in /Benchmark/tools/Contrast/working/contrast.log. This report will be automatically copied (and renamed with version number) to /Benchmark/results directory.
+* A Contrast report has been generated in ./tools/Contrast/working/contrast.log. This report will be automatically copied (and renamed with version number) to ./results directory.
 ```Shell
       $ more tools/Contrast/working/contrast.log
       2016-04-22 12:29:29,716 [main b] INFO - Contrast Runtime Engine
@@ -183,17 +183,17 @@ To use Contrast Assess, we simply add the Java agent to the Benchmark environmen
       Copying Contrast report to results directory
 ```
 
-* In Terminal 2, generate scorecards in /Benchmark/scorecard
+* In Terminal 2, generate scorecards in ./scorecard
 ```Shell
       $ ./createScorecards.sh (.bat on Windows)
       Analyzing results from Benchmark_1.2-Contrast.log
-      Actual results file generated: /Users/owasp/Projects/Benchmark/scorecard/Benchmark_v1.2_Scorecard_for_Contrast.csv
-      Report written to: /Users/owasp/Projects/Benchmark/scorecard/Benchmark_v1.2_Scorecard_for_Contrast.html
+      Actual results file generated: /Users/owasp/Projects/BenchmarkJava/scorecard/Benchmark_v1.2_Scorecard_for_Contrast.csv
+      Report written to: /Users/owasp/Projects/BenchmarkJava/scorecard/Benchmark_v1.2_Scorecard_for_Contrast.html
 ```
 
 * Open the Benchmark Scorecard in your browser
 ```Shell
-      /Users/owasp/Projects/Benchmark/scorecard/Benchmark_v1.2_Scorecard_for_Contrast.html
+      /Users/owasp/Projects/BenchmarkJava/scorecard/Benchmark_v1.2_Scorecard_for_Contrast.html
 ```
 
 **Hdiv Detection**

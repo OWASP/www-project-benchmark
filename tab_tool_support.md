@@ -7,7 +7,7 @@ order: 4
 tags: benchmark
 ---
 
-The results, from several years ago, for 5 free tools, PMD, FindBugs, FindBugs with the FindSecBugs plugin, SonarQube, and OWASP ZAP are available here against version 1.2 of the Benchmark: [https://rawgit.com/OWASP/Benchmark/master/scorecard/OWASP_Benchmark_Home.html](https://rawgit.com/OWASP/Benchmark/master/scorecard/OWASP_Benchmark_Home.html). We included multiple versions of FindSecBugs' and ZAP's results so you can see the improvements they made finding vulnerabilities in Benchmark.
+The results, from several years ago, for 5 free tools, PMD, FindBugs, FindBugs with the FindSecBugs plugin, SonarQube, and OWASP ZAP are available here against version 1.2 of the Benchmark: [https://rawgit.com/OWASP-Benchmark/BenchmarkJava/master/scorecard/OWASP_Benchmark_Home.html](https://rawgit.com/OWASP-Benchmark/BenchmarkJava/master/scorecard/OWASP_Benchmark_Home.html). We included multiple versions of FindSecBugs' and ZAP's results so you can see the improvements they made finding vulnerabilities in Benchmark.
 
 We have Benchmark results for all the following tools, but haven't publicly released the results for any commercial tools. However, we included a 'Commercial Average' page, which includes a summary of results for 6 commercial SAST tools in 2016 along with anonymous versions of each SAST tool's scorecard.
 
