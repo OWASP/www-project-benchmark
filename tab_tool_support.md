@@ -42,6 +42,7 @@ Note: We looked into supporting [Checkstyle](https://checkstyle.sourceforge.io/)
 * [Kiuwan Code Security](https://www.kiuwan.com/code-security-sast/) - .threadfix results file
 * [Micro Focus (Formerly HPE) Fortify (On-Demand and stand-alone versions)](https://software.microfocus.com/en-us/products/static-code-analysis-sast/overview) - .fpr results file
 * [Parasoft Jtest](https://www.parasoft.com/products/jtest/) - .xml results file
+* [Reshift](https://www.reshiftsecurity.com/) - .csv results file
 * [Semmle LGTM](https://semmle.com/lgtm) - .sarif results file
 * [ShiftLeft SAST](https://www.shiftleft.io/product/) - .sl results file (Benchmark specific format. Ask vendor how to generate this)
 * [Snappycode Audit's SnappyTick Source Edition (SAST)](https://snappycodeaudit.com/category/static-code-analysis) - .xml results file
