@@ -37,6 +37,7 @@ Note: We looked into supporting [Checkstyle](https://checkstyle.sourceforge.io/)
 
 * [CAST Application Intelligence Platform (AIP)](https://www.castsoftware.com/products/application-intelligence-platform) - .xml results file
 * [Checkmarx CxSAST](https://www.checkmarx.com/products/static-application-security-testing) - .xml results file
+* [Contrast Scan](https://www.contrastsecurity.com/contrast-scan) - .json SARIF format results file
 * [HCL (Formerly IBM) AppScan SAST (Standalone and Cloud)](https://www.hcltechsw.com/wps/portal/products/appscan/home) - .ozasmt or .xml results file
 * [Julia Analyzer](https://juliasoft.com) - Acquired by Grammatech. No parser for this new solution yet.
 * [Kiuwan Code Security](https://www.kiuwan.com/code-security-sast/) - .threadfix results file
@@ -83,7 +84,7 @@ If you have access to other DAST Tools, PLEASE RUN THEM FOR US against the Bench
 **Commercial Interactive Application Security Testing (IAST) Tools:**
 
 * [Checkmarx CxIAST](https://www.checkmarx.com/products/interactive-application-security-testing) - .csv results file
-* [Contrast Assess](https://www.contrastsecurity.com/interactive-application-security-testing-iast) - .log results file
+* [Contrast Assess](https://www.contrastsecurity.com/contrast-assess) - .log results file
 	* You can scan Benchmark w/Contrast for free. See: https://www.contrastsecurity.com/contrast-community-edition
 * [Hdiv Detection (IAST)](https://hdivsecurity.com/interactive-application-security-testing-iast) - .hlg results file
 * [Synopsys Seeker IAST](https://www.synopsys.com/software-integrity/security-testing/interactive-application-security-testing.html) - .csv results file
