@@ -7,7 +7,7 @@ order: 4
 tags: benchmark
 ---
 
-The results, from several years ago, for 5 free tools, PMD, FindBugs, FindBugs with the FindSecBugs plugin, SonarQube, and OWASP ZAP are available here against version 1.2 of the Benchmark: [https://rawgit.com/OWASP-Benchmark/BenchmarkJava/master/scorecard/OWASP_Benchmark_Home.html](https://rawgit.com/OWASP-Benchmark/BenchmarkJava/master/scorecard/OWASP_Benchmark_Home.html). We included multiple versions of FindSecBugs' and ZAP's results so you can see the improvements they made finding vulnerabilities in Benchmark.
+The results, from several years ago, for 5 free tools, PMD, FindBugs, FindBugs with the FindSecBugs plugin, SonarQube, and OWASP ZAP are available here against version 1.2 of the Benchmark: https://github.com/OWASP-Benchmark/BenchmarkJava/blob/master/scorecard/OWASP_Benchmark_Home.html. You'll have to clone this Git repo and open the file locally. We included multiple versions of FindSecBugs' and ZAP's results so you can see the improvements they made finding vulnerabilities in Benchmark.
 
 We have Benchmark results for all the following tools, but haven't publicly released the results for any commercial tools. However, we included a 'Commercial Average' page, which includes a summary of results for 6 commercial SAST tools in 2016 along with anonymous versions of each SAST tool's scorecard.
 
@@ -85,7 +85,7 @@ If you have access to other DAST Tools, PLEASE RUN THEM FOR US against the Bench
 
 * [Checkmarx CxIAST](https://www.checkmarx.com/products/interactive-application-security-testing) - .csv results file
 * [Contrast Assess](https://www.contrastsecurity.com/contrast-assess) - .log results file
-	* You can scan Benchmark w/Contrast for free. See: https://www.contrastsecurity.com/contrast-community-edition
+	* You can scan Benchmark w/Contrast Assess for free. See: [https://www.contrastsecurity.com/contrast-community-edition](https://www.contrastsecurity.com/contrast-community-edition)
 * [Hdiv Detection (IAST)](https://hdivsecurity.com/interactive-application-security-testing-iast) - .hlg results file
 * [Synopsys Seeker IAST](https://www.synopsys.com/software-integrity/security-testing/interactive-application-security-testing.html) - .csv results file
 

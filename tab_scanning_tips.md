@@ -49,7 +49,7 @@ You can also try different CodeQL query suites other than: java-code-scanning.ql
 
 **Kiuwan Code Security**
 
-Kiuwan Code Security wrote their own instructions for scanning the OWASP Benchmark. Refer to their [step-by-step guide](https://www.kiuwan.com/blog/owasp-benchmark-diy/) on the Kiuwan website.
+Kiuwan Code Security wrote their own instructions for scanning the OWASP Benchmark. Refer to their [step-by-step guide](https://www.kiuwan.com/owasp-benchmark-diy/) on the Kiuwan website.
 
 **Micro Focus (Formerly HP) Fortify**
 
