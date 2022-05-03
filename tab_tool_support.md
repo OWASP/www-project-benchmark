@@ -38,7 +38,7 @@ Note: We looked into supporting [Checkstyle](https://checkstyle.sourceforge.io/)
 * [CAST Application Intelligence Platform (AIP)](https://www.castsoftware.com/products/application-intelligence-platform) - .xml results file
 * [Checkmarx CxSAST](https://www.checkmarx.com/products/static-application-security-testing) - .xml results file
 * [Contrast Scan](https://www.contrastsecurity.com/contrast-scan) - .json SARIF format results file
-* [HCL (Formerly IBM) AppScan SAST (Standalone and Cloud)](https://www.hcltechsw.com/wps/portal/products/appscan/home) - .ozasmt or .xml results file
+* [HCL AppScan Source (Standalone and Cloud)](https://www.hcltechsw.com/appscan/offerings/source) - .xml (or legacy .ozasmt) results file
 * [Julia Analyzer](https://juliasoft.com) - Acquired by Grammatech. No parser for this new solution yet.
 * [Kiuwan Code Security](https://www.kiuwan.com/code-security-sast/) - .threadfix results file
 * [Micro Focus (Formerly HPE) Fortify (On-Demand and stand-alone versions)](https://software.microfocus.com/en-us/products/static-code-analysis-sast/overview) - .fpr results file
@@ -51,7 +51,7 @@ Note: We looked into supporting [Checkstyle](https://checkstyle.sourceforge.io/)
 * [Synopsys Coverity SAST (Formerly Coverity Code Advisor) (On-Demand and stand-alone versions)](https://www.synopsys.com/software-integrity/security-testing/static-analysis-sast.html) - .json results file (You can scan Benchmark w/Coverity for free. See: https://scan.coverity.com/)
 * [Thunderscan SAST](https://www.defensecode.com/thunderscan.php) - .xml results file
 * [Veracode SAST](https://www.veracode.com/products/binary-static-analysis-sast) - .xml results file
-* [XANITIZER](https://www.xanitizer.com/xanitizer/) - .xml results file ([Their white paper on how to setup Xanitizer to scan Benchmark](https://www.xanitizer.com/wp-content/uploads/howtosetupxanitizerforowaspbenchmarkproject.pdf).) (Free trial available)
+* [WhiteSource SAST (was XANITIZER)](https://www.whitesourcesoftware.com/whitesource-sast/) - .xml results file ([Their white paper on how to setup Xanitizer to scan Benchmark](https://www.xanitizer.com/wp-content/uploads/howtosetupxanitizerforowaspbenchmarkproject.pdf).) (Free trial available)
 
 We are looking for results for other commercial SAST tools. If you have a license for any static analysis tool not already listed above and can run it on Benchmark and send us the results file that would be very helpful.
 
@@ -73,7 +73,7 @@ Note: While we support scorecard generators for these Free and Commercial DAST t
 * [Acunetix Web Vulnerability Scanner (WVS)](https://www.acunetix.com/vulnerability-scanner/) - .xml results file ([see Exporting Scan Results (Generic XML export))](https://www.acunetix.com/resources/wvs11manual.pdf) was the command line /ExportXML switch) or .xml results file from Acunetix 360
 * [Burp Pro](https://portswigger.net/burp) - .xml results file
 	* To generate XML results: click on benchmark in site map so you see ALL findings in Issues pane. Then select ALL issues in Issues pane, right-click and select 'Report selected issues'. Select XML, then next, next, next, and save to file. To reduce size of results file, you can eliminate all the details, and not include requests/responses, which reduces the file size by 2/3rds.
-* [HCL (Formerly IBM) AppScan DAST](https://www.hcltechsw.com/wps/portal/products/appscan/home) - .xml results file
+* [HCL AppScan Standard](https://www.hcltechsw.com/appscan/offerings/standard) - .xml results file
 * [Micro Focus Fortify WebInspect](https://www.microfocus.com/en-us/products/webinspect-dynamic-analysis-dast/overview) - .xml results file
 * [Netsparker](https://www.netsparker.com/web-vulnerability-scanner/) - .xml results file
 * [Qualys Web App Scanner](https://www.qualys.com/apps/web-app-scanning/) - .xml results file
