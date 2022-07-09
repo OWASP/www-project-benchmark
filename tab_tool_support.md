@@ -13,9 +13,10 @@ We have Benchmark results for all the following tools, but haven't publicly rele
 
 The Benchmark can generate results for the following tools:
 
-**Free Static Application Security Testing (SAST) Tools:**
+**Free Static Application Security Testing (SAST) Tools (Both Open Source and Commercial):**
 
 * [CodeQL](https://codeql.github.com/) - .sarif results file
+* [Contrast Scan](https://www.contrastsecurity.com/contrast-scan) - .json SARIF format results file
 * [FindBugs](http://findbugs.sourceforge.net/) - .xml results file
 	* Note: FindBugs hasn't been updated since 2015. Use SpotBugs instead (see below)
 * [Horusec](https://github.com/ZupIT/horusec) - .json results file
@@ -24,16 +25,16 @@ The Benchmark can generate results for the following tools:
 * [Semgrep](https://semgrep.dev/) - .json results file
 	* e.g., semgrep -f https://semgrep.dev/p/r2c-security-audit . --json > results/Benchmark_1.2-Semgrep.json
 * [ShiftLeft Scan](https://github.com/ShiftLeftSecurity/sast-scan) - .json results file (found at reports/scan-full-report.json)
-* [SonarQube](https://www.sonarqube.org/downloads/) - .xml results file
+* [SonarQube Community Edition](https://www.sonarqube.org/downloads/) - .xml results file
 * [SpotBugs](https://spotbugs.github.io/) - .xml results file. This is the successor to FindBugs.
 * SpotBugs with the [FindSecurityBugs plugin](https://find-sec-bugs.github.io/) - .xml results file
 * [Visual Code Grepper](https://sourceforge.net/projects/visualcodegrepp/) - [Soure Code here](https://github.com/nccgroup/VCG) - .xml results file
 
-Many of these free SAST tools come bundled with Benchmark so you can run them yourselves. Simply run script/runTOOLNAME.(sh/bat) and it puts the results into the /results directory automatically. There are scripts for running PMD, FindBugs, SpotBugs, and FindSecBugs.
+Many of the free Open Source SAST tools come bundled with Benchmark so you can run them yourselves. Simply run script/runTOOLNAME.(sh/bat) and it puts the results into the /results directory automatically. There are scripts for running PMD, FindBugs, SpotBugs, and FindSecBugs.
 
 Note: We looked into supporting [Checkstyle](https://checkstyle.sourceforge.io/) but it has no security rules, just like PMD. The [fb-contrib FindBugs plugin](http://fb-contrib.sourceforge.net/) doesn't have any security rules either. We did test [Error Prone](https://errorprone.info/), and found that it does report some use of [insecure ciphers (CWE-327)](https://errorprone.info/bugpattern/InsecureCryptoUsage), but that's it.
 
-**Commercial SAST Tools:**
+**Commercial (non-Free) SAST Tools:**
 
 * [CAST Application Intelligence Platform (AIP)](https://www.castsoftware.com/products/application-intelligence-platform) - .xml results file
 * [Checkmarx CxSAST](https://www.checkmarx.com/products/static-application-security-testing) - .xml results file
@@ -47,6 +48,7 @@ Note: We looked into supporting [Checkstyle](https://checkstyle.sourceforge.io/)
 * [Semmle LGTM](https://semmle.com/lgtm) - .sarif results file
 * [ShiftLeft SAST](https://www.shiftleft.io/product/) - .sl results file (Benchmark specific format. Ask vendor how to generate this)
 * [Snappycode Audit's SnappyTick Source Edition (SAST)](https://snappycodeaudit.com/category/static-code-analysis) - .xml results file
+* [SonarQube Developer Edition (or greater)](https://www.sonarqube.org/downloads/) - .xml results file (same format as Free version)
 * [SourceMeter](https://www.sourcemeter.com) - .txt results file of ALL results from VulnerabilityHunter
 * [Synopsys Coverity SAST (Formerly Coverity Code Advisor) (On-Demand and stand-alone versions)](https://www.synopsys.com/software-integrity/security-testing/static-analysis-sast.html) - .json results file (You can scan Benchmark w/Coverity for free. See: https://scan.coverity.com/)
 * [Thunderscan SAST](https://www.defensecode.com/thunderscan.php) - .xml results file
@@ -57,21 +59,23 @@ We are looking for results for other commercial SAST tools. If you have a licens
 
 If you have a license for any commercial SAST tool, you can also run them against the Benchmark. Just put your results files in the /results folder of the project, and then run createScorecards.sh/.bat and it will generate a scorecard in the /scorecard directory for all the tool results you have that are currently supported.
 
-**Free Dynamic Application Security Testing (DAST) Tools:**
+**Free Dynamic Application Security Testing (DAST) Tools (Both Open Source and Commercial):**
 
 Note: While we support scorecard generators for these Free and Commercial DAST tools, it can be difficult to get a full/clean run against the Benchmark. As such, some of these scorecard generators might need some additional work to properly reflect their results. If you notice any problems, let us know.
 
 * [Arachni](https://www.arachni-scanner.com/) - .xml results file
 	* To generate .xml, run: ./bin/arachni_reporter "Your_AFR_Results_Filename.afr" --reporter=xml:outfile=Benchmark1.2-Arachni.xml
-* [OWASP ZAP](/www-project-zap/) - .json or .xml results file. To generate a complete ZAP results file so you can generate a valid scorecard, make sure you:
+* [Burp Suite Community Edition](https://portswigger.net/burp/communitydownload) - .xml results file
+        * To generate XML results: click on benchmark in site map so you see ALL findings in Issues pane. Then select ALL issues in Issues pane, right-click and select 'Report selected issues'. Select XML, then next, next, next, and save to file. To reduce size of results file, you can eliminate all the details, and not include requests/responses, which reduces the file size by 2/3rds.
+* [OWASP ZAP](https://www.zaproxy.org/) - .json or .xml results file. To generate a complete ZAP results file so you can generate a valid scorecard, make sure you:
 	* Tools > Options > Alerts - And set the Max alert instances to like 500.
 	* Then: Report > Generate XML Report...
 * [Wapiti](https://wapiti.sourceforge.io/) - .json or .xml results file.
 
-**Commercial DAST Tools:**
+**Commercial (non-Free) DAST Tools:**
 
 * [Acunetix Web Vulnerability Scanner (WVS)](https://www.acunetix.com/vulnerability-scanner/) - .xml results file ([see Exporting Scan Results (Generic XML export))](https://www.acunetix.com/resources/wvs11manual.pdf) was the command line /ExportXML switch) or .xml results file from Acunetix 360
-* [Burp Pro](https://portswigger.net/burp) - .xml results file
+* [Burp Suite Pro](https://portswigger.net/burp/pro) - .xml results file
 	* To generate XML results: click on benchmark in site map so you see ALL findings in Issues pane. Then select ALL issues in Issues pane, right-click and select 'Report selected issues'. Select XML, then next, next, next, and save to file. To reduce size of results file, you can eliminate all the details, and not include requests/responses, which reduces the file size by 2/3rds.
 * [HCL AppScan Standard](https://www.hcltechsw.com/appscan/offerings/standard) - .xml results file
 * [Micro Focus Fortify WebInspect](https://www.microfocus.com/en-us/products/webinspect-dynamic-analysis-dast/overview) - .xml results file
