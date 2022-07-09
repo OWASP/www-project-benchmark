@@ -16,7 +16,7 @@ The Benchmark can generate results for the following tools:
 **Free Static Application Security Testing (SAST) Tools (Both Open Source and Commercial):**
 
 * [CodeQL](https://codeql.github.com/) - .sarif results file
-* [Contrast Scan](https://www.contrastsecurity.com/contrast-scan) - .json SARIF format results file
+* [Contrast CodeSec - Scan](https://www.contrastsecurity.com/developer/codesec/) - .json SARIF format results file
 * [FindBugs](http://findbugs.sourceforge.net/) - .xml results file
 	* Note: FindBugs hasn't been updated since 2015. Use SpotBugs instead (see below)
 * [Horusec](https://github.com/ZupIT/horusec) - .json results file
