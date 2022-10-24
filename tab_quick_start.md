@@ -46,7 +46,7 @@ To download and build everything:
 
 ```Shell
 $ git clone https://github.com/OWASP-Benchmark/BenchmarkJava
-$ cd benchmark
+$ cd BenchmarkJava
 $ mvn compile   (This compiles it)
 $ runBenchmark.sh/.bat - This compiles and runs it.
 ```
