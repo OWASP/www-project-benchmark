@@ -22,7 +22,7 @@ The Benchmark can generate results for the following tools:
 * [Horusec](https://github.com/ZupIT/horusec) - .json results file
 * [Insider](https://github.com/insidersec/insider) - .json results file
 * [PMD](https://pmd.github.io/) (which really has no security rules) - .xml results file
-* [Semgrep](https://semgrep.dev/) - .json results file
+* [Semgrep Code](https://semgrep.dev/) - .json results file
 	* e.g., semgrep -f https://semgrep.dev/p/r2c-security-audit . --json > results/Benchmark_1.2-Semgrep.json
 * [ShiftLeft Scan](https://github.com/ShiftLeftSecurity/sast-scan) - .json results file (found at reports/scan-full-report.json)
 * [SonarQube Community Edition](https://www.sonarqube.org/downloads/) - .xml results file
@@ -36,24 +36,22 @@ Note: We looked into supporting [Checkstyle](https://checkstyle.sourceforge.io/)
 
 **Commercial (non-Free) SAST Tools:**
 
-* [CAST Application Intelligence Platform (AIP)](https://www.castsoftware.com/products/application-intelligence-platform) - .xml results file
-* [Checkmarx CxSAST](https://www.checkmarx.com/products/static-application-security-testing) - .xml results file
+* [CAST Application Intelligence Platform (AIP), which is a component of CAST Imaging](https://doc.castsoftware.com/display/IMAGING/CAST+Imaging) - .xml results file
+* [Checkmarx SAST](https://checkmarx.com/cxsast-source-code-scanning/) - .xml results file
 * [Contrast Scan](https://www.contrastsecurity.com/contrast-scan) - .json SARIF format results file
 * [HCL AppScan Source (Standalone and Cloud)](https://www.hcltechsw.com/appscan/offerings/source) - .xml (or legacy .ozasmt) results file
 * [Julia Analyzer](https://juliasoft.com) - Acquired by Grammatech. No parser for this new solution yet.
-* [Kiuwan Code Security](https://www.kiuwan.com/code-security-sast/) - .threadfix results file
-* [Micro Focus (Formerly HPE) Fortify (On-Demand and stand-alone versions)](https://software.microfocus.com/en-us/products/static-code-analysis-sast/overview) - .fpr results file
-* [Parasoft Jtest](https://www.parasoft.com/products/jtest/) - .xml results file
-* [Reshift](https://www.reshiftsecurity.com/) - .csv results file
+* [Kiuwan SAST](https://www.kiuwan.com/code-security-sast/) - .threadfix results file
+* [Mend SAST](https://www.mend.io/sast/) - Formerly WhiteSource and before that XANITIZER - .xml results file
+* [Micro Focus Fortify (On-Demand and stand-alone versions)](https://www.microfocus.com/en-us/cyberres/application-security/static-code-analyzer) - .fpr results file
+* [Parasoft Jtest](https://www.parasoft.com/products/parasoft-jtest/) - .xml results file
 * [Semmle LGTM](https://semmle.com/lgtm) - .sarif results file
-* [ShiftLeft SAST](https://www.shiftleft.io/product/) - .sl results file (Benchmark specific format. Ask vendor how to generate this)
-* [Snappycode Audit's SnappyTick Source Edition (SAST)](https://snappycodeaudit.com/category/static-code-analysis) - .xml results file
-* [SonarQube Developer Edition (or greater)](https://www.sonarqube.org/downloads/) - .xml results file (same format as Free version)
+* [Qwiet Next Gen SAST (Was ShiftLeft SAST)](https://qwiet.ai/sast/) - .sl results file (Benchmark specific format. Ask vendor how to generate this.)
+* [SnappyTick Source Edition (SAST)](https://snappycodeaudit.com/category/static-code-analysis-tools) - .xml results file
+* [SonarQube Developer Edition (or greater)](https://www.sonarsource.com/products/sonarqube/downloads/) - .xml results file (same format as Free version)
 * [SourceMeter](https://www.sourcemeter.com) - .txt results file of ALL results from VulnerabilityHunter
-* [Synopsys Coverity SAST (Formerly Coverity Code Advisor) (On-Demand and stand-alone versions)](https://www.synopsys.com/software-integrity/security-testing/static-analysis-sast.html) - .json results file (You can scan Benchmark w/Coverity for free. See: https://scan.coverity.com/)
-* [Thunderscan SAST](https://www.defensecode.com/thunderscan.php) - .xml results file
+* [Synopsys Coverity SAST (On-Demand and stand-alone versions)](https://www.synopsys.com/software-integrity/security-testing/static-analysis-sast.html) - .json results file (You can scan Benchmark w/Coverity for free. See: https://scan.coverity.com/)
 * [Veracode SAST](https://www.veracode.com/products/binary-static-analysis-sast) - .xml results file
-* [WhiteSource SAST (was XANITIZER)](https://www.whitesourcesoftware.com/whitesource-sast/) - .xml results file ([Their white paper on how to setup Xanitizer to scan Benchmark](https://www.xanitizer.com/wp-content/uploads/howtosetupxanitizerforowaspbenchmarkproject.pdf).) (Free trial available)
 
 We are looking for results for other commercial SAST tools. If you have a license for any static analysis tool not already listed above and can run it on Benchmark and send us the results file that would be very helpful.
 
