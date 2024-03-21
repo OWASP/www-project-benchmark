@@ -7,7 +7,7 @@ order: 4
 tags: benchmark
 ---
 
-The results, from several years ago, for 5 free tools, PMD, FindBugs, FindBugs with the FindSecBugs plugin, SonarQube, and OWASP ZAP are available here against version 1.2 of the Benchmark: https://github.com/OWASP-Benchmark/BenchmarkJava/blob/master/scorecard/OWASP_Benchmark_Home.html. You'll have to clone this Git repo and open the file locally. We included multiple versions of FindSecBugs' and ZAP's results so you can see the improvements they made finding vulnerabilities in Benchmark.
+The results, from several years ago, for 5 free tools, PMD, FindBugs, FindBugs with the FindSecBugs plugin, SonarQube, and ZAP are available here against version 1.2 of the Benchmark: https://github.com/OWASP-Benchmark/BenchmarkJava/blob/master/scorecard/OWASP_Benchmark_Home.html. You'll have to clone this Git repo and open the file locally. We included multiple versions of FindSecBugs' and ZAP's results so you can see the improvements they made finding vulnerabilities in Benchmark.
 
 We have Benchmark results for all the following tools, but haven't publicly released the results for any commercial tools. However, we included a 'Commercial Average' page, which includes a summary of results for 6 commercial SAST tools in 2016 along with anonymous versions of each SAST tool's scorecard.
 
@@ -65,7 +65,7 @@ Note: While we support scorecard generators for these Free and Commercial DAST t
 	* To generate .xml, run: ./bin/arachni_reporter "Your_AFR_Results_Filename.afr" --reporter=xml:outfile=Benchmark1.2-Arachni.xml
 * [Burp Suite Community Edition](https://portswigger.net/burp/communitydownload) - .xml results file
         * To generate XML results: click on benchmark in site map so you see ALL findings in Issues pane. Then select ALL issues in Issues pane, right-click and select 'Report selected issues'. Select XML, then next, next, next, and save to file. To reduce size of results file, you can eliminate all the details, and not include requests/responses, which reduces the file size by 2/3rds.
-* [OWASP ZAP](https://www.zaproxy.org/) - .json or .xml results file. To generate a complete ZAP results file so you can generate a valid scorecard, make sure you:
+* [ZAP](https://www.zaproxy.org/) - .json or .xml results file. To generate a complete ZAP results file so you can generate a valid scorecard, make sure you:
 	* Tools > Options > Alerts - And set the Max alert instances to like 500.
 	* Then: Report > Generate XML Report...
 * [Wapiti](https://wapiti.sourceforge.io/) - .json or .xml results file.
