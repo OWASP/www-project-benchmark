@@ -22,9 +22,11 @@ The Benchmark can generate results for the following tools:
 * [Horusec](https://github.com/ZupIT/horusec) - .json results file
 * [Insider](https://github.com/insidersec/insider) - .json results file
 * [PMD](https://pmd.github.io/) (which really has no security rules) - .xml results file
-* [Semgrep Code](https://semgrep.dev/) - .json results file
-	* e.g., semgrep -f https://semgrep.dev/p/r2c-security-audit . --json > results/Benchmark_1.2-Semgrep.json
+* [Semgrep Code](https://semgrep.dev/) - .sarif results file (.json format supported too)
+	* e.g., semgrep -f https://semgrep.dev/p/r2c-security-audit . --sarif > results/Benchmark_1.2-Semgrep.sarif
 * [ShiftLeft Scan](https://github.com/ShiftLeftSecurity/sast-scan) - .json results file (found at reports/scan-full-report.json)
+* [Snyk Code](https://snyk.io/platform/snyk-cli/) - .sarif results file (note: --json produces the same sarif file)
+	* e.g., snyk code test --sarif-file-output=results/Benchmark_1.2-Snyk.sarif
 * [SonarQube Community Edition](https://www.sonarqube.org/downloads/) - .xml results file
 * [SpotBugs](https://spotbugs.github.io/) - .xml results file. This is the successor to FindBugs.
 * SpotBugs with the [FindSecurityBugs plugin](https://find-sec-bugs.github.io/) - .xml results file
