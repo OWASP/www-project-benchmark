@@ -92,7 +92,6 @@ If you have access to other DAST Tools, PLEASE RUN THEM FOR US against the Bench
 * [Contrast Assess](https://www.contrastsecurity.com/contrast-assess) - .log results file
 	* You can scan Benchmark w/Contrast Assess for free. See: [https://www.contrastsecurity.com/contrast-community-edition](https://www.contrastsecurity.com/contrast-community-edition)
 * [Datadog Application Vulnerability Management](https://www.datadoghq.com/product/application-vulnerability-management/) - .log results file
-* [Hdiv Detection (IAST)](https://hdivsecurity.com/interactive-application-security-testing-iast) - .hlg results file
 * [Synopsys Seeker IAST](https://www.synopsys.com/software-integrity/security-testing/interactive-application-security-testing.html) - .csv results file
 
 **Commercial Hybrid Analysis Application Security Testing Tools:**

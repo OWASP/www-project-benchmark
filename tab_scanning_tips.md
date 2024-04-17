@@ -196,7 +196,3 @@ To use Contrast Assess, we simply add the Java agent to the Benchmark environmen
       /Users/owasp/Projects/BenchmarkJava/scorecard/Benchmark_v1.2_Scorecard_for_Contrast.html
 ```
 
-**Hdiv Detection**
-
-Hdiv has written their own instructions on how to run the detection component of their product on the Benchmark here: https://hdivsecurity.com/docs/features/benchmark/#how-to-run-hdiv-in-owasp-benchmark-project. You'll see that these instructions involve using the same crawler used to exercise all the test cases in the Benchmark, just like Contrast above.
-
