@@ -22,6 +22,7 @@ The Benchmark can generate results for the following tools:
 * [Horusec](https://github.com/ZupIT/horusec) - .json results file
 * [Insider](https://github.com/insidersec/insider) - .json results file
 * [PMD](https://pmd.github.io/) (which really has no security rules) - .xml results file
+* [Precaution](https://github.com/securesauce/precli) - .sarif results file
 * [Semgrep Code](https://semgrep.dev/) - .sarif results file (.json format supported too)
 	* e.g., semgrep -f https://semgrep.dev/p/r2c-security-audit . --sarif > results/Benchmark_1.2-Semgrep.sarif
 * [ShiftLeft Scan](https://github.com/ShiftLeftSecurity/sast-scan) - .json results file (found at reports/scan-full-report.json)
