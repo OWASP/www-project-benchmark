@@ -96,7 +96,7 @@ The vendor has written their own guide to [How to Set Up Xanitizer for OWASP Ben
 
 To scan, first crawl the entire Benchmark. To do a crawl, right click on Benchmark in the Site Map, select Scan-->Open scan launcher. Then click on Crawl and hit OK. Then save the project in case of a crash during the scan. Then select the /Benchmark URL and invoke: 'Actively scan this branch'. Prior to all this, you might want to give Burp more RAM before you start it (e.g., launch it like so: java -Xmx2G -jar burpsuite_pro.jar).
 
-**OWASP ZAP**
+**ZAP**
 
 ZAP may require additional memory to be able to scan the Benchmark. To configure the amount of memory:
 * Tools --> Options --> JVM: Recommend setting to: -Xmx2048m (or larger). (Then restart ZAP).
