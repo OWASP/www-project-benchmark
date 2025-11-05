@@ -28,7 +28,7 @@ Weak Hashing | 156 |  328
 Weak Randomness | 321 | 330
 XPath Injection | 180 | 643
 XSS (Cross-Site Scripting) | 100 | 79
-XXE (Xml eXternal Entity Injection) | 25 | 611
+XXE (XML eXternal Entity Injection) | 25 | 611
 **Total Test Cases** | **1,243**
 
 ## Future Work ##
