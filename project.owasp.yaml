@@ -26,6 +26,6 @@ repositories:
     url: https://github.com/OWASP-Benchmark/BenchmarkUtils
     description: OWASP Benchmark Project Utilities - Provides scorecard generation and crawling tools for Benchmark style test suites.
 tags:
-  - benchmark
+  - OWASP-benchmark
 type: tool
 website: https://owasp.org/www-project-benchmark
