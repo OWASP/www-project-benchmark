@@ -3,7 +3,7 @@ title: Java_Quick_Start
 displaytext: Java Quick Start
 layout:  null
 tab: true
-order: 3
+order: 4
 tags: benchmark
 ---
 
