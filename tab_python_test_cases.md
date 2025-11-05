@@ -34,8 +34,8 @@ XXE (Xml eXternal Entity Injection) | 25 | 611
 ## Future Work ##
 
 Other CWEs we might add:
-Weak Cryptography - CWE 327
-Regex DOS - CWE 1333
+* Weak Cryptography - CWE 327
+* Regex DOS - CWE 1333
 
 We will also likely work on trying to balance the number of true positives and false positives per test case category to be more even.
 
