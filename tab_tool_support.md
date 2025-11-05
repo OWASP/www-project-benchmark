@@ -15,8 +15,10 @@ The Benchmark Project can score results for the following tools (using Benchmark
 
 **Free Static Application Security Testing (SAST) Tools (Both Open Source and Commercial):**
 
-* [CodeQL](https://codeql.github.com/) - .sarif results file
-* [Contrast CodeSec - Scan](https://www.contrastsecurity.com/developer/codesec/) - .json SARIF format results file
+* [Bandit(Python)](https://bandit.readthedocs.io/en/latest/) - .sarif results file
+* [Bearer(Python)](https://github.com/Bearer/bearer) - .json results file
+* [CodeQL](https://codeql.github.com/) - .sarif results file (Support for both Java and Python Benchmarks)
+* [Contrast CodeSec - Scan](https://www.contrastsecurity.com/try-contrast-security) - .json SARIF format results file
 * [FindBugs](http://findbugs.sourceforge.net/) - .xml results file
 	* Note: FindBugs hasn't been updated since 2015. Use SpotBugs instead (see below)
 * [Horusec](https://github.com/ZupIT/horusec) - .json results file
@@ -46,7 +48,7 @@ Note: For Benchmark for Java, we looked into supporting [Checkstyle](https://che
 * [Julia Analyzer](https://juliasoft.com) - Acquired by Grammatech. No parser for this new solution yet.
 * [Kiuwan SAST](https://www.kiuwan.com/code-security-sast/) - .threadfix results file
 * [Mend SAST](https://www.mend.io/sast/) - Formerly WhiteSource and before that XANITIZER - .xml results file
-* [Micro Focus Fortify (On-Demand and stand-alone versions)](https://www.microfocus.com/en-us/cyberres/application-security/static-code-analyzer) - .fpr results file
+* [OpenText Fortify](https://www.opentext.com/products/static-application-security-testing) - .fpr results file (Java and Python)
 * [Parasoft Jtest](https://www.parasoft.com/products/parasoft-jtest/) - .xml results file
 * [Semmle LGTM](https://semmle.com/lgtm) - .sarif results file
 * [Qwiet Next Gen SAST (Was ShiftLeft SAST)](https://qwiet.ai/sast/) - .sl results file (Benchmark specific format. Ask vendor how to generate this.)

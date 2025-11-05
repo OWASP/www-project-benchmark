@@ -31,14 +31,15 @@ XSS (Cross-Site Scripting) | 100 | 79
 XXE (Xml eXternal Entity Injection) | 25 | 611
 **Total Test Cases** | **1,243**
 
-FUTURE WORK:
+## Future Work ##
 
 Other CWEs we might add:
-Weak Cryptography | 327
-Regex DOS | 1333
+Weak Cryptography - CWE 327
+Regex DOS - CWE 1333
 
 We will also likely work on trying to balance the number of true positives and false positives per test case category to be more even.
 
+## Test Cases ##
 
 Each Benchmark version comes with an expected results spreadsheet that lists every test case, the vulnerability category, the CWE number, and the expected result (true finding/false positive). Look for the file: expectedresults-VERSION#.csv in the project root directory.
 
@@ -47,9 +48,9 @@ Every test case is:
 * a single web page and web endpoint
 * a true vulnerability or a false positive for a single CWE
 
-The structure and organization of the Benchmark for Python is very similar to the OWASP Benchmark for Java v1.2.
+The structure and organization of the new Benchmark for Python is very similar to the OWASP Benchmark for Java v1.2.
 
-## REQUESTS ##
+## Requests ##
 
 Please provide us with feedback on any suggested fixes/improvements/bugs or tools you'd like to us to add scanning support for. As well as CWEs or Popular Python frameworks we should add test cases for.
 
