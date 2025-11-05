@@ -10,24 +10,22 @@ license:
   - GPL-2.0
   - GPL-3.0
 name: OWASP Benchmark
-pitch: The OWASP Benchmark Project is a Java test suite designed to evaluate the accuracy, coverage, and speed of automated software vulnerability detection
-  tools.
+pitch: The OWASP Benchmark Project has test suites designed to evaluate the accuracy, coverage, and speed of automated software vulnerability detection
+  tools for different languages.
 repositories:
   - name: www-project-benchmark
     url: https://github.com/OWASP/www-project-benchmark
     description: OWASP Foundation Web Repository
   - name: BenchmarkJava
     url: https://github.com/OWASP-Benchmark/BenchmarkJava
-    description: OWASP Benchmark is a test suite designed to verify the speed and accuracy of software vulnerability detection tools. A fully runnable web
-      app written in Java, it supports analysis by Static (SAST), Dynamic (DAST), and Runtime (IAST) tools that support Java. The idea is that since it
-      is fully runnable and all the vulnerabilities are actually exploitable, it’s a fair test for any kind of vulnerability detection tool.  For more details
-      on this project, please see the OWASP Benchmark Project home page.
+    description: OWASP Benchmark test suites are designed to verify the speed and accuracy of software vulnerability detection tools for different
+      languages. Each test suite is a fully runnable web app in particular language, it supports analysis by Static (SAST), Dynamic (DAST), and
+      Runtime (IAST) tools that for that language. The idea is that since it is fully runnable and all the vulnerabilities are actually exploitable,
+      it’s a fair test for any kind of vulnerability detection tool.  For more details on this project, please see the OWASP Benchmark Project home page.
   - name: BenchmarkUtils
     url: https://github.com/OWASP-Benchmark/BenchmarkUtils
     description: OWASP Benchmark Project Utilities - Provides scorecard generation and crawling tools for Benchmark style test suites.
 tags:
   - benchmark
-  - custom-tag-1
-  - custom-tag-2
 type: tool
 website: https://owasp.org/www-project-benchmark

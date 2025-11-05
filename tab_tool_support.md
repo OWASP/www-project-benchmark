@@ -7,11 +7,11 @@ order: 4
 tags: benchmark
 ---
 
-The results, from several years ago, for 5 free tools, PMD, FindBugs, FindBugs with the FindSecBugs plugin, SonarQube, and ZAP are available here against version 1.2 of the Benchmark: https://github.com/OWASP-Benchmark/BenchmarkJava/blob/master/scorecard/OWASP_Benchmark_Home.html. You'll have to clone this Git repo and open the file locally. We included multiple versions of FindSecBugs' and ZAP's results so you can see the improvements they made finding vulnerabilities in Benchmark.
+The results, from several years ago, for 5 free tools, PMD, FindBugs, FindBugs with the FindSecBugs plugin, SonarQube, and ZAP are available here against version 1.2 of the Benchmark for Java: https://github.com/OWASP-Benchmark/BenchmarkJava/blob/master/scorecard/OWASP_Benchmark_Home.html. You'll have to clone this Git repo and open the file locally. We included multiple versions of FindSecBugs' and ZAP's results so you can see the improvements they made finding vulnerabilities in Benchmark.
 
-We have Benchmark results for all the following tools, but haven't publicly released the results for any commercial tools. However, we included a 'Commercial Average' page, which includes a summary of results for 6 commercial SAST tools in 2016 along with anonymous versions of each SAST tool's scorecard.
+We have Benchmark for Java results for all the following tools, but haven't publicly released the results for any commercial tools. However, we included a 'Commercial Average' page, which includes a summary of results for 6 commercial SAST tools in 2016 along with anonymous versions of each SAST tool's scorecard.
 
-The Benchmark can generate results for the following tools:
+The Benchmark Project can score results for the following tools (using BenchmarkUtils):
 
 **Free Static Application Security Testing (SAST) Tools (Both Open Source and Commercial):**
 
@@ -33,9 +33,9 @@ The Benchmark can generate results for the following tools:
 * SpotBugs with the [FindSecurityBugs plugin](https://find-sec-bugs.github.io/) - .xml results file
 * [Visual Code Grepper](https://sourceforge.net/projects/visualcodegrepp/) - [Soure Code here](https://github.com/nccgroup/VCG) - .xml results file
 
-Many of the free Open Source SAST tools come bundled with Benchmark so you can run them yourselves. Simply run script/runTOOLNAME.(sh/bat) and it puts the results into the /results directory automatically. There are scripts for running PMD, FindBugs, SpotBugs, and FindSecBugs.
+Many free Open Source SAST tools come bundled with each Benchmark version so you can run them yourselves. Simply run script/runTOOLNAME.(sh/bat) and it puts the results into the /results directory automatically. There are scripts for running PMD, FindBugs, SpotBugs, and FindSecBugs on the Benchmark for Java, for example.
 
-Note: We looked into supporting [Checkstyle](https://checkstyle.sourceforge.io/) but it has no security rules, just like PMD. The [fb-contrib FindBugs plugin](http://fb-contrib.sourceforge.net/) doesn't have any security rules either. We did test [Error Prone](https://errorprone.info/), and found that it does report some use of [insecure ciphers (CWE-327)](https://errorprone.info/bugpattern/InsecureCryptoUsage), but that's it.
+Note: For Benchmark for Java, we looked into supporting [Checkstyle](https://checkstyle.sourceforge.io/) but it has no security rules, just like PMD. The [fb-contrib FindBugs plugin](http://fb-contrib.sourceforge.net/) doesn't have any security rules either. We did test [Error Prone](https://errorprone.info/), and found that it does report some use of [insecure ciphers (CWE-327)](https://errorprone.info/bugpattern/InsecureCryptoUsage), but that's it.
 
 **Commercial (non-Free) SAST Tools:**
 
@@ -99,4 +99,4 @@ If you have access to other DAST Tools, PLEASE RUN THEM FOR US against the Bench
 
 * [Fusion Lite Insight](https://www.iappsecure.com/products.html) - .xml results file
 
-**WARNING: If you generate results for a commercial tool, be careful who you distribute it to. Each tool has its own license defining when any results it produces can be released/made public. It may be against the terms of a commercial tool's license to publicly release that tool's score against the OWASP Benchmark. The OWASP Benchmark project takes no responsibility if someone else releases such results.**
+**WARNING: If you generate results for a commercial tool, be careful who you distribute it to. Each tool has its own license defining when any results it produces can be released/made public. It may be against the terms of a commercial tool's license to publicly release that tool's score against an OWASP Benchmark. The OWASP Benchmark project takes no responsibility if someone else releases such results.**

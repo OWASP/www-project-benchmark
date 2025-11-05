@@ -1,6 +1,6 @@
 ---
-title: Test_Cases
-displaytext: Test Cases
+title: Java_Test_Cases
+displaytext: Java Test Cases
 layout:  null
 tab: true
 order: 1
@@ -9,9 +9,9 @@ tags: benchmark
 
 ## Summary ##
 
-Version 1.2 and forward of the Benchmark is a fully executable web application, which means it is scannable by any kind of vulnerability detection tool. v1.2 has been limited to slightly less than 3,000 test cases, to make it easier for DAST tools to scan it (so it doesn't take so long and they don't run out of memory, or blow up the size of their database). The 1.2 release covers the same vulnerability areas that 1.1 covers. The bulk of the work was turning each test case into something that actually runs correctly and is fully exploitable, and then generating a UI on top that works in order to turn the test cases into a real running application.
+Version 1.2 and forward of the OWASP Benchmark for Java is a fully executable web application, which means it is scannable by any kind of vulnerability detection tool. v1.2 has been limited to slightly less than 3,000 test cases, to make it easier for DAST tools to scan it (so it doesn't take so long and they don't run out of memory, or blow up the size of their database). The 1.2 release covers the same vulnerability areas that 1.1 covers. The bulk of the work was turning each test case into something that actually runs correctly and is fully exploitable, and then generating a UI on top that works in order to turn the test cases into a real running application.
 
-The test case areas and quantities for the Benchmark releases are:
+The test case areas and quantities for the OWASP Benchmark for Java releases are:
 
 Vulnerability Area | # of Tests in v1.1 | # of Tests in v1.2 | CWE Number
 ------------------ | ------------------ | ------------------ | ----------
@@ -35,9 +35,9 @@ Every test case is:
 * an HTTP Servlet
 * a true vulnerability or a false positive for a single CWE
 
-## Release History ##
-* Version 1.0 of the Benchmark was released April 15, 2015 and had 20,983 test cases.
-* Version 1.1 of the Benchmark was released May 23, 2015. The 1.1 release improved on the previous version by making sure that there are both true positives and false positives in every vulnerability area.
+## OWASP Benchmark for Java Release History ##
+* Version 1.0 of the Benchmark for Java was released April 15, 2015 and had 20,983 test cases.
+* Version 1.1 of the Benchmark for Java was released May 23, 2015. The 1.1 release improved on the previous version by making sure that there are both true positives and false positives in every vulnerability area.
 * Version 1.2 was first released on June 5, 2016 (The 1.2beta was August 15, 2015). There have been constant tweaks to the v1.2 release since then.
 
 ## Potential future enhancements: ##
@@ -69,7 +69,7 @@ Each test case is a simple Java EE servlet. BenchmarkTest00001 in version 1.0 of
 		</test-metadata>
 
 
-BenchmarkTest00001.java in the OWASP Benchmark 1.0 simply reads in all the cookie values, looks for a cookie named "foo", and uses the value of this cookie when performing an LDAP query. Here's the code for BenchmarkTest00001.java:
+BenchmarkTest00001.java in the OWASP Benchmark for Java 1.0 simply reads in all the cookie values, looks for a cookie named "foo", and uses the value of this cookie when performing an LDAP query. Here's the code for BenchmarkTest00001.java:
 
 		java
 		package org.owasp.benchmark.testcode;

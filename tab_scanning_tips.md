@@ -7,10 +7,10 @@ order: 5
 tags: benchmark
 ---
 
-People frequently have difficulty scanning the Benchmark with various tools due to many reasons, including size of the Benchmark app and its codebase, and complexity of the tools used. Here is some guidance for some of the tools we have used to scan the Benchmark. If you've learned any tricks on how to get better or easier results for a particular tool against the Benchmark, let us know or update this page directly.
+People frequently have difficulty scanning the OWASP Benchmark with various tools due to many reasons, including size of the Benchmark app and its codebase, and complexity of the tools used. Here is some guidance for some of the tools we have used to scan the Benchmark. If you've learned any tricks on how to get better or easier results for a particular tool against the Benchmark, let us know or update this page directly.
 
 ## Generic Tips ##
-Because of the size of the Benchmark, you may need to give your tool more memory before it starts the scan. If its a Java based tool, you may want to pass more memory to it like this:
+Because of the size of the OWASP Benchmark, you may need to give your tool more memory before it starts the scan. If its a Java based tool, you may want to pass more memory to it like this:
 ```Shell
     -Xmx4G (This gives the Java application 4 Gig of memory)
 ```
@@ -77,19 +77,15 @@ We found it was easier to use the Maven support in Fortify to scan the Benchmark
 
 **PMD**
 
-We include this free tool in the Benchmark and its all dialed in. Simply run the script: ./script/runPMD.(sh or bat). If you want to run a different version of PMD, just change its version number in the Benchmark pom.xml file. (NOTE: PMD doesn't find any security issues. We include it because its interesting to know that it doesn't.)
+We include this free tool with the Benchmark for Java and its all dialed in. Simply run the script: ./script/runPMD.(sh or bat). If you want to run a different version of PMD, just change its version number in the Benchmark pom.xml file. (NOTE: PMD doesn't find any security issues. We include it because its interesting to know that it doesn't.)
 
 **SpotBugs**
 
-We include this free tool in the Benchmark and its all dialed in. Simply run the script: ./script/runSpotBugs.(sh or bat). If you want to run a different version of SpotBugs, just change its version number in the Benchmark pom.xml file.
+We include this free tool with the Benchmark for Java and its all dialed in. Simply run the script: ./script/runSpotBugs.(sh or bat). If you want to run a different version of SpotBugs, just change its version number in the Benchmark pom.xml file.
 
 **SpotBugs with FindSecBugs**
 
-[FindSecurityBugs](https://find-sec-bugs.github.io/) is a great plugin for SpotBugs that significantly increases the ability for SpotBugs to find security issues. We include this free tool in the Benchmark and its all dialed in. Simply run the script: ./script/runFindSecBugs.(sh or bat). If you want to run a different version of FindSecBugs, just change the version number of the findsecbugs-plugin artifact in the Benchmark pom.xml file.
-
-**Xanitizer**
-
-The vendor has written their own guide to [How to Set Up Xanitizer for OWASP Benchmark](https://www.xanitizer.com/wp-content/uploads/howtosetupxanitizerforowaspbenchmarkproject.pdf).
+[FindSecurityBugs](https://find-sec-bugs.github.io/) is a great plugin for SpotBugs that significantly increases the ability for SpotBugs to find security issues. We include this free tool with the Benchmark and its all dialed in. Simply run the script: ./script/runFindSecBugs.(sh or bat). If you want to run a different version of FindSecBugs, just change the version number of the findsecbugs-plugin artifact in the Benchmark pom.xml file.
 
 ## DAST Tools ##
 **Burp Pro**
