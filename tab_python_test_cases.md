@@ -15,21 +15,21 @@ The test case areas and quantities for the initial OWASP Benchmark for Python v0
 
 Vulnerability Area | # of Tests in v0.1 | CWE Number
 ------------------ | ------------------ | ----------
-Code Injection | 61 | 94
-Command Injection | 22 | 78
-Deserialization of Untrusted Data | 55 | 502
-LDAP Injection | 21 | 90
-Path Traversal | 156 | 22
-Secure Cookie Flag | 37  | 614
-SQL Injection | 34 | 89
-Trust Boundary Violation | 33 | 501
-Unchecked Redirects | 42 | 601
-Weak Hashing | 156 |  328
-Weak Randomness | 321 | 330
-XPath Injection | 180 | 643
-XSS (Cross-Site Scripting) | 100 | 79
-XXE (XML eXternal Entity Injection) | 25 | 611
-**Total Test Cases** | **1,243**
+Code Injection | 53 | 94
+Command Injection | 20 | 78
+Deserialization of Untrusted Data | 54 | 502
+LDAP Injection | 29 | 90
+Path Traversal | 168 | 22
+Secure Cookie Flag | 39  | 614
+SQL Injection | 16 | 89
+Trust Boundary Violation | 37 | 501
+Unchecked Redirects | 34 | 601
+Weak Hashing | 151 |  328
+Weak Randomness | 326 | 330
+XPath Injection | 186 | 643
+XSS (Cross-Site Scripting) | 89 | 79
+XXE (XML eXternal Entity Injection) | 28 | 611
+**Total Test Cases** | **1,230**
 
 ## Future Work ##
 
