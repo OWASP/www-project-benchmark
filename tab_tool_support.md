@@ -55,7 +55,7 @@ Note: For Benchmark for Java, we looked into supporting [Checkstyle](https://che
 * [SnappyTick Source Edition (SAST)](https://snappycodeaudit.com/category/static-code-analysis-tools) - .xml results file
 * [SonarQube Developer Edition (or greater)](https://www.sonarsource.com/products/sonarqube/downloads/) - .xml results file (same format as Free version)
 * [SourceMeter](https://www.sourcemeter.com) - .txt results file of ALL results from VulnerabilityHunter
-* [Synopsys Coverity SAST (On-Demand and stand-alone versions)](https://www.synopsys.com/software-integrity/security-testing/static-analysis-sast.html) - .json results file (You can scan Benchmark w/Coverity for free. See: https://scan.coverity.com/)
+* [Black Duck Coverity SAST (On-Demand and stand-alone versions)](https://www.blackduck.com/static-analysis-tools-sast/coverity.html) - .json results file (You can scan Benchmark w/Coverity for free. See: https://scan.coverity.com/)
 * [Veracode SAST](https://www.veracode.com/products/binary-static-analysis-sast) - .xml results file
 
 We are looking for results for other commercial SAST tools. If you have a license for any static analysis tool not already listed above and can run it on Benchmark and send us the results file that would be very helpful.
